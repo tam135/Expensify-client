@@ -1,0 +1,26 @@
+.Header {
+  height: 60px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  background-color: #4C545B;
+}
+
+.Header h1 {
+  margin: .5rem 10%;
+}
+
+.Header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 450px) {
+  .Header {
+    align-items: baseline;
+  }
+
+  .Header h1 {
+    font-size: 20pt;
+  }
+}

@@ -1,0 +1,33 @@
+.LandingPage {
+    border: 1px solid black;
+    width: 70%;
+    text-align: center;
+    margin: 10em auto;
+}
+.LandingPage__title {
+    font-size: 65px;
+}
+
+.LandingPage__description {
+    vertical-align: top;
+    padding: 25px;
+    margin: 0px auto;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+
+    width: 80%;
+    height: 100px;
+    margin: 25px auto;
+}
+.LandingPage__button {
+    display: inline-block;
+    width: 200px;
+    margin: 5px 25px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 25px;
+}
