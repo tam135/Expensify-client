@@ -3,8 +3,8 @@
     background-color: #F6F6F6;
     border: 1px solid #C2C5C8;
     border-radius: 5px;
-    width: 200px;
-    height: 15%;
+    width: 12vw;
+    height: 200px;
     margin-top: 20px;
 }
 
@@ -20,5 +20,5 @@ a:hover {
 li {
     list-style-type: none;
     color: black;
-    margin: 20px 15px;
+    margin: 30px 15px;
 }

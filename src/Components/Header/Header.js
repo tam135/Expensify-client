@@ -3,8 +3,7 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default class Header extends Component {
-    render() {
+const Header = () => {
         return (
             <nav className='Header'>
                 <h1>
@@ -16,5 +15,6 @@ export default class Header extends Component {
                 </h1>
             </nav>
         )
-    }
 }
+
+export default Header

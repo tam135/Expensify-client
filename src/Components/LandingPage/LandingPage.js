@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
 
-export default class Landingpage extends Component {
-    render() {
+const LandingPage = () =>{
+
         return (
             <div className="LandingPage">
                 <h1 className="LandingPage__title">
@@ -43,5 +43,6 @@ export default class Landingpage extends Component {
 
             </div>
         )
-    }
 }
+
+export default LandingPage

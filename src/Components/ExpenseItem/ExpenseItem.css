@@ -1,0 +1,14 @@
+.ExpenseItem {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 80%;
+    margin: 15px 15%;
+    display:flex;
+
+}
+
+p {
+
+    margin: 20px 10%;
+    text-align: center;
+}

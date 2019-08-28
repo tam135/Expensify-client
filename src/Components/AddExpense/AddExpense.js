@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Header/Header'
 import { Textarea, Button } from '../../Utils/Utils'
+import SideBar from '../SideBar/SideBar'
 import './AddExpense.css'
 
 export default class AddExpense extends Component {
@@ -11,11 +12,13 @@ export default class AddExpense extends Component {
                 <nav className='Header'>
                     <Header />
                 </nav>
+                <SideBar />
 
                 <form className='AddExpenseForm'>
                     <div className='AddExpenseForm__Options'>
                         <label htmlFor='AddExpenseForm__date'>
                             Date
+                            {' '}
                             </label>
                         <input
                             name='date'
@@ -25,6 +28,7 @@ export default class AddExpense extends Component {
                     <div className='AddExpenseForm__Options'>
                         <label htmlFor='AddExpenseForm__amount'>
                             Amount
+                            {' '}
                             </label>
                         <input
                             name='amount'
@@ -37,6 +41,7 @@ export default class AddExpense extends Component {
                     <div className='AddExpenseForm__Options'>
                         <label htmlFor='AddExpenseForm__category'>
                             Category
+                            {' '}
                             </label>
                         <select>
                             <option value="Bills">Bills</option>
@@ -52,7 +57,7 @@ export default class AddExpense extends Component {
                             Description
                             </label>
                         <Textarea>
-                            
+
                         </Textarea>
                     </div>
 

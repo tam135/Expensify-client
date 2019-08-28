@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './SideBar.css'
-export default class SideBar extends Component {
-    render() {
+
+const SideBar = () => {
+
         return (
             <div className='sidebar'>
                  
@@ -28,5 +29,6 @@ export default class SideBar extends Component {
 
             </div>
         )
-    }
 }
+
+export default SideBar

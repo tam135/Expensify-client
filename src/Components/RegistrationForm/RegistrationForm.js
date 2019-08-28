@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './RegistrationForm.css'
 import { Button, Input, Required } from '../../Utils/Utils'
 
-export default class RegistrationForm extends Component {
-    render() {
+const RegistrationForm = () => {
+    
         return (
             <form
                 className='RegistrationForm'
@@ -49,5 +49,6 @@ export default class RegistrationForm extends Component {
                 </Button>
             </form>
         )
-    }
 }
+
+export default RegistrationForm

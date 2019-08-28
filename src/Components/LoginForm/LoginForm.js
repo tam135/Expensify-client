@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { Button, Input  } from '../../Utils/Utils'
 import './LoginForm.css'
 
-export default class LoginForm extends Component {
-    render() {
+const LoginForm = () => {
         return (
             <form
                 className='LoginForm'
-                onSubmit={this.handleSubmitJwtAuth}
             >
 
                 <div className='user_name'>
@@ -37,5 +35,6 @@ export default class LoginForm extends Component {
                 </Button>
             </form>
         )
-    }
 }
+
+export default LoginForm
