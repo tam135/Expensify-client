@@ -1,0 +1,24 @@
+.sidebar {
+    position: fixed;
+    background-color: #F6F6F6;
+    border: 1px solid #C2C5C8;
+    border-radius: 5px;
+    width: 200px;
+    height: 15%;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+li {
+    list-style-type: none;
+    color: black;
+    margin: 20px 15px;
+}

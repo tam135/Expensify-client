@@ -6,11 +6,11 @@ import './LandingPage.css'
 export default class Landingpage extends Component {
     render() {
         return (
-            <div className = "LandingPage">
-                <h1 className = "LandingPage__title">
+            <div className="LandingPage">
+                <h1 className="LandingPage__title">
                     <FontAwesomeIcon className='blue' icon='search-dollar' />
                     {' '}
-                    Expensify
+                    Expensity
                 </h1>
 
                 <section className="LandingPage__description">
@@ -22,7 +22,7 @@ export default class Landingpage extends Component {
                     <h3>Spend less Save more</h3>
                     <p>Think you waste too much on food? Interactive charts and stats help you understand what to spend less on.</p>
                 </section>
-                <section className = "button-container">
+                <section className="button-container">
                     <Link to='/login'>
                         <button
                             type="submit"
@@ -31,9 +31,16 @@ export default class Landingpage extends Component {
                         </button>
                     </Link>
 
-                    <button type="submit" className="LandingPage__button demo-button">Demo</button>
+                    <Link to='/Register'>
+                        <button
+                            type="submit"
+                            className="LandingPage__button reg-button">
+                            Register
+                        </button>
+                    </Link>
+
                 </section>
-                
+
             </div>
         )
     }

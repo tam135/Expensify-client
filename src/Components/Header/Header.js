@@ -9,7 +9,7 @@ export default class Header extends Component {
             <nav className='Header'>
                 <h1>
                     <Link to='/'>
-                        Expensify
+                        Expensity
                         {' '}
                         <FontAwesomeIcon className='blue' icon='search-dollar' />
                     </Link>

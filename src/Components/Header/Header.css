@@ -1,18 +1,21 @@
 .Header {
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: normal;
   justify-content: space-between;
   background-color: #4C545B;
 }
 
+
 .Header h1 {
-  margin: .5rem 10%;
+  margin: auto 1vw;
 }
+
 
 .Header a {
   color: #fff;
   text-decoration: none;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 450px) {

@@ -8,8 +8,6 @@ export default class RegistrationForm extends Component {
             <form
                 className='RegistrationForm'
             >
-               
-
                 <div className='full_name'>
                     <label htmlFor='RegistrationForm__full_name'>
                         Full name <Required />
