@@ -18,6 +18,16 @@
   font-size: 2rem;
 }
 
+.SignOut {
+  margin-top: 10px;
+}
+
+.SignOut a {
+  font-size: 1.3rem;
+  margin-right: 20px;
+
+}
+
 @media screen and (min-width: 450px) {
   .Header {
     align-items: baseline;

@@ -1,7 +1,7 @@
 .AddExpenseForm {
     border: 1px solid black;
     border-radius: 10px;
-    height: 500px;
+    height: 550px;
     width: 60%;
     text-align: center;
     margin: 5% auto;
@@ -13,7 +13,6 @@
     margin: 5% 1%;
 }
 input, select {
-
     border-radius: 5px;
     width: 11rem;
     height: 2rem;
@@ -22,11 +21,22 @@ input, select {
 
 
 .description {
-    margin: 5%;
+    margin: 15px;
     border-radius: 10px;
 }
 .Textarea {
     width: 80%;
     height: 100px;
     margin: auto;
+}
+
+@media only screen and (max-width: 425px) {
+   .Button {
+        order: 1px solid #aaa;
+
+        font-size: .6em;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-weight: bold;
+}
 }

@@ -1,14 +1,60 @@
-.ExpenseItem {
+
+ .expense-container {
+    width: 70vw;
     border: 1px solid black;
     border-radius: 15px;
-    width: 80%;
     margin: 15px 15%;
-    display:flex;
+    
+} 
+
+/* .expense-container:hover {
+    transform: scale(1.01);
+  }
+ */
+.expense-container a {
+    color: black;
+    }
+.expense-container a:hover{
+    cursor: pointer;
+    transform:scale(1.1);
+    
+    
+} 
+ 
+@media only screen and (max-width: 600px) {
 
 }
 
-p {
+@media only screen and (min-width: 600px) {
 
-    margin: 20px 10%;
-    text-align: center;
 }
+
+@media only screen and (min-width: 780px) {
+    .expense-container {
+        width: 70vw;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin: 15px 15%;
+        display: flex;
+    }
+    
+    .expense-header {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .expense-item {
+        padding: 1.5rem 2rem;
+        width: 8vw; 
+    }
+
+    .edit-delete {
+        height: 80px;
+        margin-left: 15px;
+    }
+   
+
+} 
+
+
+

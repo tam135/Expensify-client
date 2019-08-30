@@ -7,11 +7,15 @@ import App from './Components/App/App'
 
 import {
     faSearchDollar,
+    faEdit,
+    faTrashAlt,
 
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faSearchDollar, // logo
+    faEdit,
+    faTrashAlt,
     
 )
 ReactDOM.render(
