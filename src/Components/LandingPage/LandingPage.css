@@ -1,33 +1,56 @@
-.LandingPage {
-    border: 1px solid black;
+ .LandingPage__app{
+    background-color: #A3BCD2;
+    background-size: cover;
+
+}
+
+.LandingPage__container {
+    
     width: 70%;
     text-align: center;
-    margin: 10em auto;
+    margin: auto auto;
+    padding: 5%;
 }
 .LandingPage__title {
     font-size: 65px;
 }
 
-.LandingPage__description {
+/* .LandingPage__description {
     vertical-align: top;
     padding: 25px;
-    margin: 0px auto;
+    margin: 50% auto;
     display: inline-block;
     width: 400px;
-    margin-bottom: 20px;
+    
+} */
+
+
+
+.LandingPage__description1{
+    padding: 25px;
+    margin: 50% auto 25px auto;
+    width: 60%
 }
 
-.button-container {
 
+
+.demo-button {
+    margin-top: 50px;
+}
+.button-container {
     width: 80%;
     height: 100px;
     margin: 25px auto;
 }
-.LandingPage__button {
+button {
     display: inline-block;
     width: 200px;
-    margin: 5px 25px;
+    margin: 50px 25px;
     border-radius: 5px;
     padding: 20px;
     font-size: 25px;
+} 
+
+.screenshot1 {
+    width: 500px;
 }

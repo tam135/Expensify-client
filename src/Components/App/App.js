@@ -8,13 +8,14 @@ import AddExpense from '../AddExpense/AddExpense'
 import Dashboard from '../Dashboard/Dashboard'
 import ExpenseList from '../ExpenseList/ExpenseList';
 import ExpenseItem from '../ExpenseItem/ExpenseItem'
-//import SideBar from '../SideBar/SideBar'
+
 
 export default class App extends Component {
   render() {
     
     return (
       <div className='App'>
+        
         <Switch>
           <Route exact path='/' component={LandingPage} /> 
           <Route exact path='/register' component={RegistrationForm} />
