@@ -18,6 +18,8 @@ library.add(
     faTrashAlt,
     
 )
+
+console.log(process.env)
 ReactDOM.render(
     <BrowserRouter>
         <App />
