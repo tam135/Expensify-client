@@ -2,7 +2,7 @@
     border: 1px solid black;
     border-radius: 10px;
     height: 550px;
-    width: 60%;
+    width: 65%;
     text-align: center;
     margin: 5% auto;
     font-size: 25px;
@@ -17,8 +17,6 @@ input, select {
     width: 11rem;
     height: 2rem;
 }
-
-
 
 .description {
     margin: 15px;

@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import ExpenseItem from '../ExpenseItem/ExpenseItem'
 import Header from '../Header/Header'
 import SideBar from '../SideBar/SideBar'
+import ExpensesContext from '../../Context/ExpensesContext'
 import './ExpenseList.css'
 
 export default class ExpenseList extends Component {
-
+    static contextType = ExpensesContext;
     render() {
-        const expenses = [
+       /*  const expenses = [
             {
                 id: 1, Date: '8/20/2019', Amount: '9.99', Category: 'Food',
                 Description: 'Lunch at work'
@@ -20,8 +21,8 @@ export default class ExpenseList extends Component {
                 id: 3, Date: '8/22/2019', Amount: '30.00', Category: 'Entertainment',
                 Description: 'Movie ticket and large popcorn'
             }
-        ]
-
+        ] */
+        const { expenses } = this.context
         return (
           <div>
             <nav>
@@ -70,6 +71,6 @@ export default class ExpenseList extends Component {
             </section>
           </div>
         );
-        //TODO: Add filter by dates, amount, category
+
     }
 }
