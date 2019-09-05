@@ -3,9 +3,8 @@ import './ExpenseItem.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ExpensesContext from '../../Context/ExpensesContext';
 import config from '../../config'
-import { Link } from 'react-router-dom'
 
-function deleteExpense(expenseId, cb) {
+function deleteExpense(expenseId, callback) {
   fetch(config.API_ENDPOINT + `/${expenseId}`, {
     method: 'DELETE',
     headers: {
@@ -22,8 +21,7 @@ function deleteExpense(expenseId, cb) {
     })
     .then(data => {
       console.log({ data })
-      cb(expenseId)
-      this.props.history.push('/dashboard')
+      callback(expenseId)
     })
     .catch(error => {
       console.log(error)
@@ -36,7 +34,7 @@ export default function ExpenseItem(props) {
           <div className="expense-container">
           <div className="expense-header">
             <div className="expense-item">
-              <span className='ExpenseItem__Info'>{props.date.toLocaleString()}</span>
+              <span className='ExpenseItem__Info'>{props.date}</span>
             </div>
   
             <div className="expense-item">
@@ -52,13 +50,14 @@ export default function ExpenseItem(props) {
             </div>
           </div>
           
-          <button>
+          <button className="button__edit-delete">
             <FontAwesomeIcon className="edit-delete" icon="edit" />
           </button>
         
-          
-          <button onClick={() => {deleteExpense(props.id, context.deleteExpense)}}>
-          <FontAwesomeIcon className="edit-delete" icon="trash-alt" />
+          <button 
+            onClick={() => {deleteExpense(props.id, context.deleteExpense)}}
+            className="button__edit-delete">
+            <FontAwesomeIcon className="edit-delete" icon="trash-alt" />
           </button>
         </div>
         )}

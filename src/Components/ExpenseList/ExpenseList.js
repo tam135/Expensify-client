@@ -6,22 +6,13 @@ import ExpensesContext from '../../Context/ExpensesContext'
 import './ExpenseList.css'
 
 export default class ExpenseList extends Component {
-    static contextType = ExpensesContext;
-    render() {
-       /*  const expenses = [
-            {
-                id: 1, Date: '8/20/2019', Amount: '9.99', Category: 'Food',
-                Description: 'Lunch at work'
-            },
-            {
-                id: 2, Date: '8/21/2019', Amount: '199.99', Category: 'Bills',
-                Description: 'Electricity Bill'
-            },
-            {
-                id: 3, Date: '8/22/2019', Amount: '30.00', Category: 'Entertainment',
-                Description: 'Movie ticket and large popcorn'
-            }
-        ] */
+  static defaultProps = {
+    bookmarks: []
+  };
+
+  static contextType = ExpensesContext;
+    
+  render() {
         const { expenses } = this.context
         return (
           <div>

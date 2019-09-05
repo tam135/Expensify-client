@@ -17,7 +17,15 @@ class App extends Component {
     super(props);
     this.state = {
       expenses: [],
+      error: null,
     };
+  }
+
+  setExpenses = expenses => { 
+    this.setState({
+      expenses,
+      error: null
+    })
   }
 
   addExpense = expense => {
@@ -27,35 +35,27 @@ class App extends Component {
   }
 
   deleteExpense = expenseId => {
-    const newExpense = this.state.expenses.filter(ex => ex.id !== expenseId)
+    const newExpenses = this.state.expenses.filter(ex => ex.id !== expenseId)
     this.setState({
-      expenses: newExpense
+      expenses: newExpenses
     })
   }
 
   componentDidMount() {
     fetch(config.API_ENDPOINT, {
-      method: 'GET'
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json'
+      }
     })
       .then(res => {
         if(!res.ok) {
-          return res.json().then(error => Promise.reject(error))
+          throw new Error(res.status)
         }
-        return res
+        return res.json()
       })
-        .then(res => res.json())
-        .then(data => {
-          console.log(data)
-          this.setState({
-            expenses: data,
-            error: null
-          })
-        })
-        .catch(err => {
-          this.setState({
-            error: err.message
-          })
-        })
+        .then(this.setExpenses)
+        .catch(error => this.setState({ error }))
   }
 
   render() {
@@ -76,9 +76,7 @@ class App extends Component {
             <Route exact Path='/expenses ' component={ExpenseList} />
           </Switch>
         </ExpensesContext.Provider>
-        
       </main>
-
     )
   }
 }

@@ -37,7 +37,7 @@ const LandingPage = () =>{
                         <Link to='/login'>
                             <button
                                 type="submit"
-                                className="button login-button">
+                                className="login-button">
                                 Login
                             </button>
                         </Link>
@@ -45,7 +45,7 @@ const LandingPage = () =>{
                         <Link to='/Register'>
                             <button
                                 type="submit"
-                                className="utton reg-button">
+                                className="reg-button">
                                 Register
                             </button>
                         </Link>

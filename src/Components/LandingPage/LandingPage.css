@@ -42,7 +42,7 @@
     height: 100px;
     margin: 25px auto;
 }
-button {
+login-button, reg-button {
     display: inline-block;
     width: 200px;
     margin: 50px 25px;
