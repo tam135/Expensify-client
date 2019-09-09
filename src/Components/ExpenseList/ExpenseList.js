@@ -53,7 +53,7 @@ export default class ExpenseList extends Component {
                     key={expense.id}
                     date={expense.Date}
                     amount={expense.Amount}
-                    category={expense.Category}
+                    style={expense.Style}
                     description={expense.Description}
                     {...expense}
                   />

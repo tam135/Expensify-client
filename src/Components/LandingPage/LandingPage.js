@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
 import screenshot from './addexpense.png'
 import donut from './donut.png'
-const LandingPage = () =>{
 
+const LandingPage = () =>{
         return (
             <div className="LandingPage__app">
                 <div className="LandingPage__container">

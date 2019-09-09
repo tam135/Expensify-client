@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './RegistrationForm.css'
 import { Button, Input, Required } from '../../Utils/Utils'
 

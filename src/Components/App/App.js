@@ -8,7 +8,7 @@ import LoginForm from '../LoginForm/LoginForm'
 import AddExpense from '../AddExpense/AddExpense'
 import Dashboard from '../Dashboard/Dashboard'
 import ExpenseList from '../ExpenseList/ExpenseList';
-//import ExpenseItem from '../ExpenseItem/ExpenseItem'
+import UpdateExpense from '../UpdateExpense/UpdateExpense'
 import ExpensesContext from '../../Context/ExpensesContext'
 
 
@@ -31,6 +31,14 @@ class App extends Component {
   addExpense = expense => {
     this.setState({
       expenses: [...this.state.expenses, expense]
+    })
+  }
+
+  updateExpense = updatedExpense => {
+    this.setState({
+      expenses: this.state.expenses.map(ex => 
+        (ex.id !== updatedExpense.id) ? ex : updatedExpense
+      )
     })
   }
 
@@ -62,12 +70,14 @@ class App extends Component {
     const contextValue = {
       expenses: this.state.expenses,
       addExpense: this.addExpense,
-      deleteExpense: this.deleteExpense
+      deleteExpense: this.deleteExpense,
+      updateExpense: this.updateExpense
     }
     return (
       <main className='App'>
         <ExpensesContext.Provider value={contextValue}>
           <Switch>
+            <Route path ='/update/:expenseId' component={UpdateExpense} />
             <Route exact path='/' component={LandingPage} /> 
             <Route exact path='/register' component={RegistrationForm} />
             <Route exact path='/login' component={LoginForm} />
