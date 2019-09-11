@@ -28,6 +28,7 @@ function deleteExpense(expenseId, callback) {
       console.log(error)
     })
 }
+
 export default function ExpenseItem(props) {
     return (
       <ExpensesContext.Consumer>

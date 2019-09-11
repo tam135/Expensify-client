@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ExpensesContext from "../../Context/ExpensesContext";
 import config from "../../config";
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
+import TokenService from "../../Services/token-service";
 
 export default class UpdateExpense extends Component {
     static contextType = ExpensesContext
@@ -17,28 +18,30 @@ export default class UpdateExpense extends Component {
     componentDidMount() {
         const { expenseId } = this.props.match.params
         fetch(config.API_ENDPOINT + `/${expenseId}`, {
-        method: 'GET',
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            'authorization': `basic ${TokenService.getAuthToken()}`
+          }
         })
-        .then(res => {
-            if (!res.ok)
-            return res.json().then(error => Promise.reject(error))
+          .then(res => {
+            if (!res.ok) return res.json().then(error => Promise.reject(error));
 
-            return res.json()
-        })
-        .then(responseData => {
+            return res.json();
+          })
+          .then(responseData => {
             this.setState({
               id: responseData.id,
               date: responseData.date,
               amount: responseData.amount,
               style: responseData.style,
-              description: responseData.description,
-
+              description: responseData.description
             });
-        })
-        .catch(error => {
-            console.error(error)
-            this.setState({ error })
-        })
+          })
+          .catch(error => {
+            console.error(error);
+            this.setState({ error });
+          });
     }
     handleSubmit = (expense, callback) => {
         this.setState({ error: null })

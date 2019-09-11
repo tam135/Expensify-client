@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Textarea } from "../../Utils/Utils";
+import { Textarea } from "../Utils/Utils";
 
 
 const noop = () => {};

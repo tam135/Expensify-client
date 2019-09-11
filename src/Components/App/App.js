@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
-//import Header from '../Header/Header'
 import config from '../../config'
 import LandingPage from '../LandingPage/LandingPage'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
+import Header from '../Header/Header'
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
-import LoginForm from '../LoginForm/LoginForm'
+import LoginPage from "../../Routes/LoginPage";
 import AddExpense from '../AddExpense/AddExpense'
 import Dashboard from '../Dashboard/Dashboard'
 import ExpenseList from '../ExpenseList/ExpenseList';
 import UpdateExpense from '../UpdateExpense/UpdateExpense'
 import ExpensesContext from '../../Context/ExpensesContext'
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
+import SideBar from '../SideBar/SideBar';
 
-
+const exclusionArray = ["/", "/login", "/register"];
 class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -51,22 +55,25 @@ class App extends Component {
 
   componentDidMount() {
     fetch(config.API_ENDPOINT, {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
+
       }
     })
       .then(res => {
-        if(!res.ok) {
-          throw new Error(res.status)
+        if (!res.ok) {
+          throw new Error(res.status);
         }
-        return res.json()
+        return res.json();
       })
-        .then(this.setExpenses)
-        .catch(error => this.setState({ error }))
+      .then(this.setExpenses)
+      .catch(error => this.setState({ error }));
   }
-
+  
   render() {
+    
+    const { location } = this.props
     const contextValue = {
       expenses: this.state.expenses,
       addExpense: this.addExpense,
@@ -74,21 +81,27 @@ class App extends Component {
       updateExpense: this.updateExpense
     }
     return (
-      <main className='App'>
-        <ExpensesContext.Provider value={contextValue}>
-          <Switch>
-            <Route path ='/update/:expenseId' component={UpdateExpense} />
-            <Route exact path='/' component={LandingPage} /> 
-            <Route exact path='/register' component={RegistrationForm} />
-            <Route exact path='/login' component={LoginForm} />
-            <Route exact path='/addExpense' component={AddExpense} />
-            <Route exact path='/dashboard' component={Dashboard} />
-            <Route exact Path='/expenses ' component={ExpenseList} />
-          </Switch>
-        </ExpensesContext.Provider>
-      </main>
-    )
+      <div>
+        <header className="App__header">
+          <Header />
+        </header>
+        {exclusionArray.indexOf(location.pathname) < 0 && <SideBar />}
+        <main className="App">
+          <ExpensesContext.Provider value={contextValue}>
+            <Switch>
+              <PrivateRoute path="/update/:expenseId" component={UpdateExpense} />
+              <Route exact path="/" component={LandingPage} />
+              <PublicOnlyRoute exact path="/register" component={RegistrationForm} />
+              <PublicOnlyRoute exact path="/login" component={LoginPage} />
+              <Route exact path="/addExpense" component={AddExpense} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact Path="/expenses " component={ExpenseList} />
+            </Switch>
+          </ExpensesContext.Provider>
+        </main>
+      </div>
+    );
   }
 }
 
-export default App
+export default withRouter(App);

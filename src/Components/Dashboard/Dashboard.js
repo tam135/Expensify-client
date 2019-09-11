@@ -6,8 +6,8 @@ export default class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard">
-                <Header/>
-                <SideBar/>
+                {/* <Header/> */}
+                {/* <SideBar/> */}
                 <p>Charts and stats will be on this page later</p>
             </div>
         )
