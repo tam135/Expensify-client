@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import Header from '../Header/Header'
-
-import SideBar from '../SideBar/SideBar'
 import config from '../../config'
 import ExpensesContext from '../../Context/ExpensesContext'
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
@@ -53,17 +50,11 @@ export default class AddExpense extends Component {
     const { error } = this.state
         return (
           <div className="AddExpensePage">
-            <header>
-              {/* <Header />
-              <SideBar /> */}
-            </header>
-            
             <ExpenseForm 
               error={error}
               onSubmit={this.handleSubmit}
               onCancel={this.handleClickCancel}
             />
-           
           </div>
         );
     }

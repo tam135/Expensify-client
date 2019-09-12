@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ExpenseItem from '../ExpenseItem/ExpenseItem'
-import SideBar from '../SideBar/SideBar'
+
 import ExpensesContext from '../../Context/ExpensesContext'
 import './ExpenseList.css'
 
@@ -17,7 +17,6 @@ export default class ExpenseList extends Component {
           <div>
             <nav>
              
-              {/* <SideBar /> */}
             </nav>
             <section className="ExpenseList__Filters">
               <label htmlFor="ExpenseList__Dates"></label>

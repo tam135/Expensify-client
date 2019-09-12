@@ -1,5 +1,6 @@
 import React from 'react'
 import './ExpenseItem.css'
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ExpensesContext from '../../Context/ExpensesContext';
 import config from '../../config'
@@ -7,26 +8,21 @@ import { Link } from 'react-router-dom'
 
 function deleteExpense(expenseId, callback) {
   fetch(config.API_ENDPOINT + `/${expenseId}`, {
-    method: 'DELETE',
+    method: "DELETE",
     headers: {
-      'content-type': 'application/json',
+      "content-type": "application/json"
     }
   })
     .then(res => {
-      if(!res.ok) {
-        return res.json().then(error => {
-          throw error
-        })
-      }
-      return res.json()
+      if (!res.ok) return res.json().then(error => Promise.reject(error));
     })
     .then(data => {
-      console.log({ data })
-      callback(expenseId)
+      console.log({ data });
+      callback(expenseId);
     })
     .catch(error => {
-      console.log(error)
-    })
+      console.log(error);
+    });
 }
 
 export default function ExpenseItem(props) {
@@ -71,3 +67,12 @@ export default function ExpenseItem(props) {
 ExpenseItem.defaultProps = {
   onClickDelete: () => {},
 }
+
+ExpenseItem.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  date: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  desciption: PropTypes.string,
+  style: PropTypes.string.isRequired,
+  onClickDelete: PropTypes.func
+};
