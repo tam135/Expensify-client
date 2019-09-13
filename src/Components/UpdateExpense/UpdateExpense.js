@@ -21,7 +21,6 @@ export default class UpdateExpense extends Component {
           method: "GET",
           headers: {
             "content-type": "application/json",
-            'authorization': `basic ${TokenService.getAuthToken()}`
           }
         })
           .then(res => {

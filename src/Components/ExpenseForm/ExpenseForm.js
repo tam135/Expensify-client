@@ -102,6 +102,7 @@ class ExpenseForm extends Component {
             onChange={this.handleChangeStyle}
           >
             <option value="blank">Choose Category</option>
+            <option value="Transportation">Transportation</option>
             <option value="Bills">Bills</option>
             <option value="Personal">Personal</option>
             <option value="Entertainment">Entertainment</option>

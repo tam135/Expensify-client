@@ -3,7 +3,6 @@ import config from '../../config'
 import ExpensesContext from '../../Context/ExpensesContext'
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
 import TokenService from "../../Services/token-service";
-
 import './AddExpense.css'
 
 export default class AddExpense extends Component {
@@ -23,7 +22,6 @@ export default class AddExpense extends Component {
       body: JSON.stringify(expense),
       headers: {
         "content-type": "application/json",
-        authorization: `basic ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {
