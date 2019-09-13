@@ -10,41 +10,74 @@ export default class ExpenseList extends Component {
       expenses: []
     }
   }
-/*   static defaultProps = {
-    expenses: []
-  };  */
- 
+
   static contextType = ExpensesContext;
 
-   
-  amountAscending = event => {
+  sortDateNew = () => {
+    const { expenses } = this.context;
+    let newerDates = expenses.sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    )
+    this.setState({
+      expenses: newerDates
+    })
+    console.log(newerDates)
+  }
+
+  sortDateOld = () => {
+    const { expenses } = this.context;
+    let olderDates = expenses.sort(
+      (a, b) => new Date(a.date) - new Date(b.date)
+    )
+    this.setState({
+      expenses: olderDates
+    });
+    console.log(olderDates);
+  }
+
+  amountAscending = () => {
     const { expenses } = this.context; 
-    let newList = expenses.sort(
+    let ascendingList = expenses.sort(
       (a, b) => parseFloat(a.amount) - parseFloat(b.amount)
     );
-    this.setState ({
-      expenses: newList
-    })
+    this.setState({
+      expenses: ascendingList
+    });
   }
 
-  amountDescending = event => {
+  amountDescending = () => {
     const { expenses } = this.context; 
-    let newList = expenses.sort(
+    let descendingList = expenses.sort(
       (a, b) => parseFloat(b.amount) - parseFloat(a.amount)
     );
-    this.setState ({
-      expenses: newList
+    this.setState({
+      expenses: descendingList
+    });
+  } 
+
+  filterCategory = e => {
+    const {expenses} = this.context;
+    const styles = [e.target.value]
+    let filteredList = expenses.filter(i => styles.includes(i.style));
+    this.setState({
+      expenses: filteredList
     })
-  }
-
-
+    console.log(filteredList)
+  }  
+ 
   render() {
         const { expenses } = this.context
         return (
           <div>
             <section className="ExpenseList__Filters">
               <label htmlFor="ExpenseList__Dates"></label>
-              <select>
+              <select onChange={(e) => {
+                if (e.target.value === "OldToNew") {
+                  this.sortDateOld();
+                } else if (e.target.value === "NewToOld") {
+                  this.sortDateNew();
+                }
+              }}>
                 <option>Sort By Date</option>
                 <option value="OldToNew">Oldest to New</option>
                 <option value="NewToOld">Newest to Oldest</option>
@@ -52,7 +85,7 @@ export default class ExpenseList extends Component {
 
               <label htmlFor="ExpenseList_Amount"></label>
               <select
-                onChange={e => {
+                onChange={(e) => {
                   if (e.target.value === "LowToHigh") {
                     this.amountAscending();
                   } else if (e.target.value === "HighToLow") {
@@ -66,7 +99,7 @@ export default class ExpenseList extends Component {
               </select>
 
               <label htmlFor="ExpenseList_Category"></label>
-              <select>
+               <select onChange={this.filterCategory}>
                 <option value="AllCategories">All Categories</option>
                 <option value="Transportation">Transportation</option>
                 <option value="Bills">Bills</option>
@@ -74,7 +107,8 @@ export default class ExpenseList extends Component {
                 <option value="Entertainment">Entertainment</option>
                 <option value="Food">Food</option>
                 <option value="Travel">Travel</option>
-              </select>
+              </select> 
+             
             </section>
 
             <section className="ExpenseList">
