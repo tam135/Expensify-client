@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Textarea } from "../Utils/Utils";
+import { Textarea, Button } from "../Utils/Utils";
 
 
 const noop = () => {};
@@ -70,7 +70,7 @@ class ExpenseForm extends Component {
         {id && <input type="hidden" name="id" value={id} />}
 
         <div className="AddExpenseForm__Options">
-          <label htmlFor="AddExpenseForm__date">Date </label>
+          <label htmlFor="AddExpenseForm__label">Date </label>
           <input
             name="date"
             type="date"
@@ -82,7 +82,7 @@ class ExpenseForm extends Component {
         </div>
 
         <div className="AddExpenseForm__Options">
-          <label htmlFor="AddExpenseForm__amount">Amount </label>
+          <label htmlFor="AddExpenseForm__label">Amount </label>
           <input
             name="amount"
             type="text"
@@ -94,7 +94,7 @@ class ExpenseForm extends Component {
         </div>
 
         <div className="AddExpenseForm__Options">
-          <label htmlFor="AddExpenseForm__category">Category </label>
+          <label htmlFor="AddExpenseForm__label">Category </label>
           <select
             id="style"
             name="style"
@@ -112,7 +112,7 @@ class ExpenseForm extends Component {
         </div>
 
         <div className="description">
-          <label htmlFor="AddExpenseForm__description">Description </label>
+          <label htmlFor="AddExpenseForm__label">Description </label>
           <Textarea
             value={description}
             name="description"

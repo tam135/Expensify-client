@@ -2,20 +2,27 @@
     border: 1px solid black;
     border-radius: 10px;
     height: 550px;
-    width: 65%;
+    width: 75%;
     text-align: center;
     margin: 5% auto;
     font-size: 25px;
+
 }
 
 .AddExpenseForm__Options {
-    display: inline-block;
-    margin: 5% 1%;
+    display: block;
+    margin: 15px auto;
+    
 }
+
+.AddExpenseForm__label{
+    display: block;
+}
+
 input, select {
     border-radius: 5px;
-    width: 11rem;
-    height: 2rem;
+    width: 85%;
+    height: 30px;
 }
 
 .description {
@@ -28,13 +35,27 @@ input, select {
     margin: auto;
 }
 
-@media only screen and (max-width: 425px) {
-   .Button {
-        order: 1px solid #aaa;
+@media only screen and (min-width: 768px) {
+    .AddExpenseForm {
+        width: 40%;
+    }
+    .AddExpenseForm__Options {
+        display: inline-block;
+        margin-top: 5%;
+    }
 
-        font-size: .6em;
-        border-radius: 4px;
-        padding: 8px 12px;
-        font-weight: bold;
+    input, select {
+        border-radius: 5px;
+        width: 85%;
+        height: 2rem;
+    }
+
+
 }
+
+@media only screen and (min-width: 1024px) {
+    .AddExpenseForm__Options {
+        
+        margin-top: 5%;
+    }
 }
