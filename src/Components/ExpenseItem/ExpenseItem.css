@@ -3,14 +3,11 @@
     width: 70vw;
     border: 1px solid black;
     border-radius: 15px;
-    margin: 15px 15%;
-    
+    text-align: center;
+    margin: 15px 5%;
 } 
 
-/* .expense-container:hover {
-    transform: scale(1.01);
-  }
- */
+
 .expense-container a {
     color: black;
     }
@@ -31,6 +28,7 @@
     outline:none;
 }
 
+
 @media only screen and (max-width: 600px) {
 
 }
@@ -39,7 +37,7 @@
 
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 768px) {
     .expense-container {
         width: 70vw;
         border: 1px solid black;
@@ -62,9 +60,12 @@
         height: 80px;
         margin-left: 15px;
     }
-   
+    .delete {
+        margin-top: 10px;
+    }
 
 } 
+
 
 
 

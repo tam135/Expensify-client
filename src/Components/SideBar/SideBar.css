@@ -1,14 +1,26 @@
 .sidebar {
-    position: fixed;
-    background-color: #F6F6F6;
-    border: 1px solid #C2C5C8;
-    border-radius: 5px;
-    width: 150px;
-    height: 200px;
-    margin-top: 5%;
+    background-color: #F6F6F6; 
+    height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
 }
 
-a {
+.sidebar a {
+    text-decoration: underline;
+}
+ 
+li a {
+    text-decoration: none;
+    margin-top: 1px;
+    color: black;
+}
+
+.active {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.sidebar a {
     text-decoration: none;
 }
 
@@ -16,17 +28,25 @@ a {
     text-decoration: underline;
 }
 
-
 li {
     list-style-type: none;
     color: black;
-    margin: 30px 15px;
 }
 
- 
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width: 768px) {
     .sidebar {
-        margin-top: 65vh;
-        margin-left: 30%;
+        position: fixed;
+        border: 1px solid #C2C5C8;
+        border-radius: 5px;
+        width: 130px;
+        height: 200px;
+        margin-top: 5%;
+        display: block;
+        padding: 0
     }
-}
+
+    li {
+        margin: 30px 15px;
+    }
+
+} 

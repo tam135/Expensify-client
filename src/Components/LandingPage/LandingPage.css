@@ -1,56 +1,124 @@
- .LandingPage__app{
-    background-color: #A3BCD2;
+.LandingPage__app{
+    background: linear-gradient(to bottom right,#ffffff 0,#2c85fa);
     background-size: cover;
-
+    height: 200vh;
+    font-family: DejaVu Sans;
 }
-
 .LandingPage__container {
-    
-    width: 70%;
     text-align: center;
     margin: auto auto;
-    padding: 5%;
-}
-.LandingPage__title {
-    font-size: 65px;
-}
-
-/* .LandingPage__description {
-    vertical-align: top;
-    padding: 25px;
-    margin: 50% auto;
-    display: inline-block;
-    width: 400px;
-    
-} */
-
-
-
-.LandingPage__description1{
-    padding: 25px;
-    margin: 50% auto 25px auto;
-    width: 60%
+    height: 150vh;
+    padding: 1%;
+    padding-top: 35%;
 }
 
-
-
-.demo-button {
-    margin-top: 50px;
+h1 {
+    font-size: 45px;
 }
-.button-container {
+
+h2 {
+    font-size: 30px;
+    font-weight: 500
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400
+}
+
+
+.LandingPage__Tagline {
+    width: 90%;
+    margin: auto auto;
+}
+
+.LandingPage__description1 {
+    margin: auto auto;
     width: 80%;
-    height: 100px;
-    margin: 25px auto;
+    padding-top: 50vh;
 }
-login-button, reg-button {
-    display: inline-block;
-    width: 200px;
-    margin: 50px 25px;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 25px;
-} 
 
+
+.LandingPage__description2{
+    margin: auto auto;
+    width: 80%;
+    margin-top: 75px;
+}
+
+
+
+.demo-button{
+    background: linear-gradient(to bottom right,#53d1fe 0,#1f66b6);
+    width: 200px;
+    font-size: 25px;
+    margin-top: 45px;
+    
+}
 .screenshot1 {
-    width: 500px;
+    height: 150px;
+}
+
+.screenshot2 {
+    height: 150px;
+    width: 250px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #1081C7;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .LandingPage__container {
+        width: 70%;
+        text-align: center;
+        margin: auto auto;
+        padding: 5%;
+        padding-top: 10%;
+    }
+
+    .LandingPage__title {
+        font-size: 65px;
+    }
+
+    .LandingPage__description1{
+        margin: auto auto;
+       
+        width: 80%
+    }
+
+
+
+    .demo-button {
+        margin-top: 50px;
+        width: 200px;
+    }
+    .button-container {
+        width: 80%;
+        height: 100px;
+        margin: 25px auto;
+    }
+    login-button, reg-button {
+        display: inline-block;
+        width: 200px;
+        margin: 50px 25px;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 25px;
+    } 
+    .demo-button{
+        width: 200px;
+        font-size: 25px;
+    }
 }

@@ -3,39 +3,35 @@
   display: flex;
   align-items: normal;
   justify-content: space-between;
-  background-color: #4C545B;
+  background-color: #1081C7;
 }
-
 
 .Header h1 {
-  margin: auto .8vw;
+  margin: auto 1vw;
+  font-size: 1.5rem;
 }
-
 
 .Header a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 2rem;
-}
-
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 .SignOut {
-  margin-top: 10px;
+  margin: auto 5px;
 }
+@media screen and (min-width: 768px) {
 
-.SignOut a {
-  font-size: 1.3rem;
-  margin-right: 20px;
-
-}
-
-
-
-@media screen and (min-width: 450px) {
-  .Header {
-    align-items: baseline;
+  .Header a {
+    font-size: 2rem;
   }
 
-  .Header h1 {
-    font-size: 20pt;
+  .SignOut {
+    margin-top: 10px;
+  }
+
+  .SignOut a {
+    font-size: 1.3rem;
+    margin-right: 20px;
+
   }
 }

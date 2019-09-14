@@ -28,40 +28,43 @@ function deleteExpense(expenseId, callback) {
 export default function ExpenseItem(props) {
     return (
       <ExpensesContext.Consumer>
-        {(context) => (
+        {context => (
           <div className="expense-container">
-          <div className="expense-header">
-            <div className="expense-item">
-              <span className='ExpenseItem__Info'>{props.date}</span>
+            <div className="expense-header">
+              <div className="expense-item">
+                <span className="ExpenseItem__Info">{props.date}</span>
+              </div>
+
+              <div className="expense-item">
+                <span className="ExpenseItem__Info">{props.amount}</span>
+              </div>
+
+              <div className="expense-item">
+                <span className="ExpenseItem__Info">{props.style}</span>
+              </div>
+
+              <div className="expense-item">
+                <span className="ExpenseItem__Info">{props.description}</span>
+              </div>
             </div>
-  
-            <div className="expense-item">
-              <span className='ExpenseItem__Info'>{props.amount}</span>
-            </div>
-  
-            <div className="expense-item">
-              <span className='ExpenseItem__Info'>{props.style}</span>
-            </div>
-  
-            <div className="expense-item">
-              <span className='ExpenseItem__Info'>{props.description}</span> 
-            </div>
+
+            <Link to={`/update/${props.id}`}>
+              <button className="button__edit-delete edit">
+                <FontAwesomeIcon className="edit-delete" icon="edit" />
+              </button>
+            </Link>
+
+            <button
+              onClick={() => {
+                deleteExpense(props.id, context.deleteExpense);
+              }}
+              className="button__edit-delete delete">
+              <FontAwesomeIcon className="edit-delete" icon="trash-alt" />
+            </button>
           </div>
-          
-          <Link to={`/update/${props.id}`}>
-            <FontAwesomeIcon className="edit-delete" icon="edit" />
-          </Link>
-          <button 
-            onClick={() => {deleteExpense(props.id, context.deleteExpense)}}
-            className="button__edit-delete">
-            <FontAwesomeIcon className="edit-delete" icon="trash-alt" />
-          </button>
-        </div>
         )}
       </ExpensesContext.Consumer>
-          
-       
-    )
+    );
 }
 
 ExpenseItem.defaultProps = {
