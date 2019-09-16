@@ -56,13 +56,14 @@ export default class Dashboard extends Component {
       labels: this.state.categories,
       datasets: [
         {
-          label: " total amount spent per category",
+          label: " Amount spent per category",
           backgroundColor: [
             "#36A2EB",
             "#FFCE56",
             "#FCEF2D",
             "#2D5BFC",
-            "#2DFC45 "
+            "#2DFC45",
+            "#F826F4"
           ],
           borderColor: "rgba(255,99,132,1)",
           data: []
@@ -74,12 +75,13 @@ export default class Dashboard extends Component {
         {
           data: [],
           backgroundColor: [
-            "#CCC",
+            
             "#36A2EB",
             "#FFCE56",
             "#FCEF2D",
             "#2D5BFC",
-            "#2DFC45 "
+            "#2DFC45",
+            "#F826F4"
           ]
         }
       ],
@@ -103,7 +105,7 @@ export default class Dashboard extends Component {
           }
         }
       },
-      maintainAspectRatio: true
+      maintainAspectRatio: true,
     };
     let total_amount_Spend = 0;
     let count_entries = 0;
@@ -136,21 +138,20 @@ export default class Dashboard extends Component {
     }
     return (
       this.state.expenses && (
-        <div className="dashboard" style={{ marginLeft: "20vh" }}>
+        <div className="dashboard" >
           {/* <h1 style={{ textAlign: "center" }}>Charts and Stats </h1> */}
-          <h3>Total Entries : {count_entries}</h3>
-          <h3>Total Amount Spend : {total_amount_Spend}</h3>
-          <h3>
-            Average amount spent per expense :{" "}
+          <p className="stats">Total Entries: {count_entries}</p>
+          <p className="stats">Total Expenses: ${total_amount_Spend}</p>
+          <p className="stats">
+            Average expense: {''}$
             {(total_amount_Spend / count_entries).toFixed(1)}
-          </h3>
+          </p>
           <HorizontalBar data={data1} options={{ maintainAspectRatio: true }} />
- 
+
           <h4 style={{ textAlign: "center" }}>
-            Number of entries per category
+            Number of Expenses per category
           </h4>
           <Doughnut data={data2} options={option} />
-      
         </div>
       )
     );
