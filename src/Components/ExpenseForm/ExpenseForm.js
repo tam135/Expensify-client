@@ -113,20 +113,26 @@ class ExpenseForm extends Component {
 
         <div className="description">
           <label htmlFor="AddExpenseForm__label">Description </label>
-          <Textarea
+          <textarea
             value={description}
             name="description"
             id="description"
-            placeholder="description"
+            placeholder="What did you spend your money on?"
             onChange={this.handleChangeDescription}
           />
         </div>
 
-        <div className="AddBookmark__buttons">
-          <button type="button" onClick={onCancel}>
+        <div>
+          <button
+            type="button"
+            onClick={onCancel}
+            className="AddExpenseForm__button"
+          >
             Cancel
           </button>{" "}
-          <button type="submit">Save</button>
+          <button type="submit" className="AddExpenseForm__button">
+            Save
+          </button>
         </div>
       </form>
     );

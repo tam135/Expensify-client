@@ -48,3 +48,52 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.Form {
+  width: 60%;
+  height: 450px;
+  margin:100px auto 0;
+  padding:50px;
+  background-color:#EEE;
+  color:#333;
+  border:2px solid #C2D6FF;
+  border-radius:40px 0 40px 0
+}
+
+.Input2 {
+  margin: auto auto;
+  border:1px solid #DADADA;
+  margin-top:20px;
+  margin-bottom:10px;
+  padding-left: 2%;
+  height: 25px;
+  box-shadow:0 0 8px;
+  -webkit-box-shadow:0 0 8px;
+  border-radius:5px;
+  border:1px solid #cbcbcb;
+}
+
+.Button2 {
+    margin-top: 20px;
+    border-radius:5px;
+    border:none;
+    padding:10px 25px;
+    color:#FFF;
+    text-shadow:1px 1px 1px #949494; 
+    background-color:#56B0FE;
+}
+
+
+.Button2:hover{
+    background-color:#117FDF;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+      .Form {
+        width: 350px;
+        height: 400px;
+    } 
+}

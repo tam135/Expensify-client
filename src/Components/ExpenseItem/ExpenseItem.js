@@ -48,17 +48,23 @@ export default function ExpenseItem(props) {
               </div>
             </div>
 
-            <Link to={`/update/${props.id}`}>
+            <button className="button__edit-delete edit">
+              <Link to={`/update/${props.id}`}>
+                <FontAwesomeIcon className="edit-delete" icon="edit" />
+              </Link>
+            </button>
+            {/* <Link to={`/update/${props.id}`}>
               <button className="button__edit-delete edit">
                 <FontAwesomeIcon className="edit-delete" icon="edit" />
               </button>
             </Link>
-
+ */}
             <button
               onClick={() => {
                 deleteExpense(props.id, context.deleteExpense);
               }}
-              className="button__edit-delete delete">
+              className="button__edit-delete delete"
+            >
               <FontAwesomeIcon className="edit-delete" icon="trash-alt" />
             </button>
           </div>

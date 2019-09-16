@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TokenService from "../../Services/token-service";
 import AuthApiService from "../../Services/auth-api-service";
-import { Button, Input } from "../Utils/Utils";
+import { Button2, Form, Input2 , Required} from "../Utils/Utils";
 import './LoginForm.css'
 
 export default class LoginForm extends Component {
@@ -34,28 +34,32 @@ export default class LoginForm extends Component {
     render() {
         const { error } = this.state;
         return (
-          <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
+          <Form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
             <div role="alert">{error && <p className="red">{error}</p>}</div>
             <div className="user_name">
-              <label htmlFor="LoginForm__user_name">User name</label>
-              <Input
-                required
-                name="user_name"
-                id="LoginForm__user_name"
-              ></Input>
+              <h2 className="login">
+                Login 
+              </h2>
+              <hr />
+              <label htmlFor="LoginForm__user_name">
+                User name <Required />
+              </label>
+              <Input2 required name="username" id="user_name"></Input2>
             </div>
 
             <div className="password">
-              <label htmlFor="LoginForm__password">Password</label>
-              <Input
+              <label htmlFor="LoginForm__password">
+                Password <Required />
+              </label>
+              <Input2
                 required
                 name="password"
                 type="password"
-                id="LoginForm__password"
-              ></Input>
+                id="password"
+              ></Input2>
             </div>
-            <Button type="submit">Login</Button>
-          </form>
+            <Button2 type="submit">Login</Button2>
+          </Form>
         );
     }
 }

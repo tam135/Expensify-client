@@ -1,4 +1,13 @@
-.LoginForm {
-    width: 500px;
-    margin: 5% auto;
+
+
+label{
+    font-size:15px;
+    font-weight:700;
+    display: block;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+   
 }

@@ -1,10 +1,11 @@
 
  .expense-container {
-    width: 70vw;
+    width: 80vw;
     border: 1px solid black;
     border-radius: 15px;
     text-align: center;
-    margin: 15px 5%;
+    margin-bottom: 15px;
+    padding: 2%;
 } 
 
 
@@ -13,11 +14,13 @@
     }
  
 .edit-delete {
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
+    color: #1F85DE;
 }
 .edit-delete:hover {
-    transform:scale(1.1);
+    transform:scale(1.1); 
+ 
 }
 .button__edit-delete {
     background-color: Transparent;
@@ -29,21 +32,14 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-
-}
-
-@media only screen and (min-width: 600px) {
-
-}
-
 @media only screen and (min-width: 768px) {
     .expense-container {
-        width: 70vw;
+        width: 80vw;
         border: 1px solid black;
         border-radius: 15px;
         margin: 15px 15%;
         display: flex;
+        padding: 0;
     }
     
     .expense-header {
@@ -60,12 +56,19 @@
         height: 80px;
         margin-left: 15px;
     }
-    .delete {
-        margin-top: 10px;
-    }
 
 } 
 
+@media only screen and (min-width: 1024px) {
+    .expense-container {
+        width: 70vw;
+
+    }
+    .edit-delete {
+        margin-right: 15px;
+        font-size: 30px;
+    }
+}
 
 
 

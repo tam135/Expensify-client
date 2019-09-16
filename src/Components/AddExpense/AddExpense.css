@@ -1,61 +1,50 @@
 .AddExpenseForm {
-    border: 1px solid black;
+    width: 60%;
+    height: 450px;
+    margin: 50px auto;
+    padding:50px;
+    background-color:#EEE;
+    color:#333;
+    border:2px solid #C2D6FF;
     border-radius: 10px;
-    height: 550px;
-    width: 75%;
-    text-align: center;
-    margin: 5% auto;
-    font-size: 25px;
 
 }
 
 .AddExpenseForm__Options {
     display: block;
-    margin: 15px auto;
-    
 }
 
-.AddExpenseForm__label{
+
+
+input#date, input#amount, select {
+    width: 200px;
+    height: 20px;
     display: block;
-}
-
-input, select {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 20px;
     border-radius: 5px;
-    width: 85%;
-    height: 30px;
+    border: 1px solid black;
+
 }
 
-.description {
-    margin: 15px;
-    border-radius: 10px;
-}
-.Textarea {
-    width: 80%;
+
+
+#description {
+    width: 200px;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5px;
     height: 100px;
-    margin: auto;
+    padding: 3%;
 }
 
-@media only screen and (min-width: 768px) {
-    .AddExpenseForm {
-        width: 40%;
-    }
-    .AddExpenseForm__Options {
-        display: inline-block;
-        margin-top: 5%;
-    }
-
-    input, select {
-        border-radius: 5px;
-        width: 85%;
-        height: 2rem;
-    }
-
-
-}
-
-@media only screen and (min-width: 1024px) {
-    .AddExpenseForm__Options {
-        
-        margin-top: 5%;
-    }
+.AddExpenseForm__button {
+    margin-top: 20px;
+    border-radius:5px;
+    border:none;
+    padding:10px 25px;
+    color:#FFF;
+    text-shadow:1px 1px 1px #949494; 
+    background-color:#56B0FE;
 }

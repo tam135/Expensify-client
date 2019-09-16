@@ -1,17 +1,21 @@
 .ExpenseList {
     text-align: center;
 }
+
 .ExpenseList__Filters {
     border-radius: 10px;
-    width: 30%;
-    margin-top: 5px;
-    margin-left: 6vw;
+    width: 50%;
+    margin: 15px 5%;
     display:flex;
     justify-content: space-between;
 }
 
+.ExpenseList_Options {
+    margin-right: 10px;
+}
 .ExpenseList__Select {
     width: 30vw;
+    margin: 2px;
 }
 
 
