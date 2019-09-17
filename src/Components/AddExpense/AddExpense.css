@@ -3,7 +3,7 @@
     height: 450px;
     margin: 50px auto;
     padding:50px;
-    background-color:#EEE;
+    background: linear-gradient(to bottom right,#51dbe0 0,#12f38a);
     color:#333;
     border:2px solid #C2D6FF;
     border-radius: 10px;
@@ -47,6 +47,11 @@ input#date, input#amount, select {
     color:#FFF;
     text-shadow:1px 1px 1px #949494; 
     background-color:#56B0FE;
+    font-size: 18px;
+}
+
+.AddExpenseForm__button:hover {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

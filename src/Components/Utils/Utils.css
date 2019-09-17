@@ -54,7 +54,7 @@
   height: 450px;
   margin:100px auto 0;
   padding:50px;
-  background-color:#EEE;
+  background: linear-gradient(to bottom right,#11beb6 0,#23d49f, #63ffd8);
   color:#333;
   border:2px solid #C2D6FF;
   border-radius:40px 0 40px 0

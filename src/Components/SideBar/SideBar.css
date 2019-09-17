@@ -1,5 +1,5 @@
 .sidebar {
-    background-color: #F6F6F6; 
+    background: linear-gradient(to bottom right,#45f0e7 0,#2cf798);
     height: 35px;
     display: flex;
     justify-content: space-evenly;
@@ -8,6 +8,7 @@
 
 .sidebar a {
     text-decoration: underline;
+    
 }
  
 li a {
