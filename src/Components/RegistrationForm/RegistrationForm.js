@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import "./RegistrationForm.css";
-import { Button2, Input, Required, Form, Input2 } from "../Utils/Utils";
+import { Button2, Required, Form, Input2 } from "../Utils/Utils";
 import AuthApiService from "../../Services/auth-api-service";
 
 

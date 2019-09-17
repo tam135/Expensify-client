@@ -7,37 +7,36 @@ export default class ExpenseList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      expenses: []
+      expenses: props.expenses || []
     };
   }
 
   static contextType = ExpensesContext;
 
   sortDateNew = () => {
-    const { expenses } = this.context;
-    let newerDates = expenses.sort(
+    const { expenses } = this.state;
+    let newerDates = [...expenses].sort(
       (a, b) => new Date(b.date) - new Date(a.date)
     );
     this.setState({
       expenses: newerDates
     });
-    console.log(newerDates);
+
   };
 
   sortDateOld = () => {
-    const { expenses } = this.context;
-    let olderDates = expenses.sort(
+    const { expenses } = this.state;
+    let olderDates = [...expenses].sort(
       (a, b) => new Date(a.date) - new Date(b.date)
     );
     this.setState({
       expenses: olderDates
     });
-    console.log(olderDates);
   };
 
   amountAscending = () => {
-    const { expenses } = this.context;
-    let ascendingList = expenses.sort(
+    const { expenses } = this.state;
+    let ascendingList = [...expenses].sort(
       (a, b) => parseFloat(a.amount) - parseFloat(b.amount)
     );
     this.setState({
@@ -46,8 +45,8 @@ export default class ExpenseList extends Component {
   };
 
   amountDescending = () => {
-    const { expenses } = this.context;
-    let descendingList = expenses.sort(
+    const { expenses } = this.state;
+    let descendingList = [...expenses].sort(
       (a, b) => parseFloat(b.amount) - parseFloat(a.amount)
     );
     this.setState({
@@ -58,15 +57,19 @@ export default class ExpenseList extends Component {
   filterCategory = e => {
     const { expenses } = this.context;
     const styles = [e.target.value];
-    let filteredList = expenses.filter(i => styles.includes(i.style));
+    let filteredList = []
+    if(styles.includes('AllCategories')) {
+      filteredList = this.context.expenses
+    } else {
+      filteredList = expenses.filter(i => styles.includes(i.style));
+    }
     this.setState({
       expenses: filteredList
     });
-    console.log(filteredList);
   };
 
   render() {
-    const { expenses } = this.context;
+    const { expenses } = this.state
     return (
       <div>
         <section className="ExpenseList__Filters">

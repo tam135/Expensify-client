@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Textarea, Button } from "../Utils/Utils";
-
 
 const noop = () => {};
 

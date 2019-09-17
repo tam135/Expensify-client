@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ExpensesContext from "../../Context/ExpensesContext";
 import config from "../../config";
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
-import TokenService from "../../Services/token-service";
 
 export default class UpdateExpense extends Component {
     static contextType = ExpensesContext

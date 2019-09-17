@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import config from '../../config'
 import ExpensesContext from '../../Context/ExpensesContext'
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
-import TokenService from "../../Services/token-service";
 import './AddExpense.css'
 
 export default class AddExpense extends Component {

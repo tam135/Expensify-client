@@ -45,7 +45,7 @@ export default class Statistics extends Component {
   }
 
   setExpenses() {
-    console.log("updating expenses");
+    /* console.log("updating expenses"); */
     this.setState({
       originalExpenses: this.context.expenses,
       expenses: this.state.expenses || this.context.expenses
@@ -94,11 +94,11 @@ export default class Statistics extends Component {
       tooltips: {
         callbacks: {
           label: function(tooltipItem, data) {
-            var dataset = data.datasets[tooltipItem.datasetIndex];
-            var meta = dataset._meta[Object.keys(dataset._meta)[0]];
-            var total = meta.total;
-            var currentValue = dataset.data[tooltipItem.index];
-            var percentage = parseFloat(
+            let dataset = data.datasets[tooltipItem.datasetIndex];
+            let meta = dataset._meta[Object.keys(dataset._meta)[0]];
+            let total = meta.total;
+            let currentValue = dataset.data[tooltipItem.index];
+            let percentage = parseFloat(
               ((currentValue / total) * 100).toFixed(1)
             );
             return currentValue + "%";
@@ -131,7 +131,7 @@ export default class Statistics extends Component {
       total_entries_of_each_category.forEach(val => {
         count_entries += val;
       });
-      console.log(count_entries);
+      /* console.log(count_entries); */
       sum_of_each_category.forEach(val => {
         data1.datasets[0].data.push(val);
         let temp = (val / total_amount_Spend) * 100;
@@ -142,7 +142,6 @@ export default class Statistics extends Component {
     return (
       this.state.expenses && (
         <div className="statistic">
-          {/* <h1 style={{ textAlign: "center" }}>Charts and Stats </h1> */}
           <p className="stats stats1">
             {count_entries}
             <span className="stats__title">Total Entries</span>

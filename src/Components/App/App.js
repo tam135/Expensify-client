@@ -89,13 +89,25 @@ class App extends Component {
         <main className="App">
           <ExpensesContext.Provider value={contextValue}>
             <Switch>
-              <PrivateRoute path="/update/:expenseId" component={UpdateExpense} />
+              <PrivateRoute
+                path="/update/:expenseId"
+                component={UpdateExpense}
+              />
               <Route exact path="/" component={LandingPage} />
-              <PublicOnlyRoute exact path="/register" component={RegistrationForm} />
+              <PublicOnlyRoute
+                exact
+                path="/register"
+                component={RegistrationForm}
+              />
               <PublicOnlyRoute exact path="/login" component={LoginPage} />
               <Route exact path="/addExpense" component={AddExpense} />
               <Route exact path="/statistics" component={Statistics} />
-              <Route exact Path="/expenses " component={ExpenseList} />
+              {/* <Route exact Path="/expenses " component={ExpenseList}  /> */}
+              <Route
+                exact
+                path="/expenses"
+                component={() => <ExpenseList expenses={this.state.expenses} />}
+              />
             </Switch>
           </ExpensesContext.Provider>
         </main>

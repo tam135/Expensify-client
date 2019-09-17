@@ -36,7 +36,7 @@ const LandingPage = () =>{
                 <h3>See your progress</h3>
                 <p>
                   Spend too much money without realizing it? These charts and
-                  statistics updates as you record your expenses and will help
+                  statistics update as you record your expenses and will help
                   you understand what you spend too much on.
                 </p>
                 <img src={gif2} alt="charts" className="screenshot2" />
