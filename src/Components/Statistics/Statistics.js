@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./Dashboard.css";
+import "./Statistics.css";
 import ExpensesContext from "../../Context/ExpensesContext";
 import { Bar } from "react-chartjs-2";
 import { Doughnut } from "react-chartjs-2";
 
 let check = true;
-export default class Dashboard extends Component {
+export default class Statistics extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -141,17 +141,17 @@ export default class Dashboard extends Component {
     }
     return (
       this.state.expenses && (
-        <div className="dashboard">
+        <div className="statistic">
           {/* <h1 style={{ textAlign: "center" }}>Charts and Stats </h1> */}
-          <p className="stats">
+          <p className="stats stats1">
             {count_entries}
             <span className="stats__title">Total Entries</span>
           </p>
-          <p className="stats">
+          <p className="stats stats2">
             ${total_amount_Spend}
             <span className="stats__title">Total Expenses</span>
           </p>
-          <p className="stats">
+          <p className="stats stats3">
             ${(total_amount_Spend / count_entries).toFixed(2)}
             <span className="stats__title">Expense Average</span>
           </p>
@@ -168,9 +168,6 @@ export default class Dashboard extends Component {
             </div>
 
             <div className="charts doughnutChart">
-              {/* <h4 style={{ textAlign: "center" }}>
-                Percentage of spending
-              </h4> */}
               <Doughnut data={data2} options={option} />
             </div>
           </div>

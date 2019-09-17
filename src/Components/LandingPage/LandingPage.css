@@ -1,7 +1,7 @@
 .LandingPage__app{
     background: linear-gradient(to bottom right,#ffffff 0,#d6dee9);
     background-size: cover;
-    height: 200vh;
+    height: 225vh;
     font-family: DejaVu Sans;
 }
 .LandingPage__container {
@@ -9,7 +9,11 @@
     margin: auto auto;
     height: 150vh;
     padding: 1%;
-    padding-top: 35%;
+    padding-top: 10%;
+}
+
+.LandingPage__container {
+    animation: moveInBottom ease-out .75s;
 }
 
 h1 {
@@ -61,15 +65,16 @@ p {
 .demo-button:hover {
     background: #26F1CB;
     transform: scale(1.1);
+    cursor: pointer;
 }
-.screenshot1 {
-    height: 150px;
+.screenshot1, .screenshot2 {
+    width: 90%;
 }
 
-.screenshot2 {
-    height: 150px;
-    width: 250px;
+.Header a {
+    animation: moveInTop ease-out .75s;
 }
+
 
 footer {
     position: fixed;
@@ -80,6 +85,38 @@ footer {
     background-color: #1081C7;
     color: white;
     text-align: center;
+    padding: .5%;
+    font-size: 22px;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,17 +125,15 @@ footer {
         width: 70%;
         text-align: center;
         margin: auto auto;
-        padding: 5%;
-        padding-top: 10%;
+
     }
 
     .LandingPage__title {
         font-size: 65px;
     }
 
-    .LandingPage__description1{
+    .LandingPage__description1 {
         margin: auto auto;
-       
         width: 80%
     }
 
@@ -125,4 +160,9 @@ footer {
         width: 200px;
         font-size: 25px;
     }
+
+    .screenshot1, .screenshot2 {
+        width: 40vw;
+    }
+
 }

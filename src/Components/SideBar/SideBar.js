@@ -8,15 +8,16 @@ const SideBar = () => {
         return (
           <div className="sidebar">
             <li>
-              <NavLink to="/dashboard" activeClassName="active">
-                Dashboard
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/expenses" activeClassName="active">
                 Expenses
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/statistics" activeClassName="active">
+                Statistics
+              </NavLink>
+            </li>
+
             <li>
               <NavLink to="/addExpense" activeClassName="active">
                 Add Expense

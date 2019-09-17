@@ -57,7 +57,7 @@ export default class Header extends Component {
     return (
       <nav className="Header">
         <h1>
-          <Link to="/expenses">
+          <Link to="/">
             Expensity <FontAwesomeIcon className="blue" icon="search-dollar" />
           </Link>
         </h1>

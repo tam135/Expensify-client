@@ -6,7 +6,7 @@ import Header from '../Header/Header'
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
 import LoginPage from "../../Routes/LoginPage";
 import AddExpense from '../AddExpense/AddExpense'
-import Dashboard from '../Dashboard/Dashboard'
+import Statistics from '../Statistics/Statistics'
 import ExpenseList from '../ExpenseList/ExpenseList';
 import UpdateExpense from '../UpdateExpense/UpdateExpense'
 import ExpensesContext from '../../Context/ExpensesContext'
@@ -94,7 +94,7 @@ class App extends Component {
               <PublicOnlyRoute exact path="/register" component={RegistrationForm} />
               <PublicOnlyRoute exact path="/login" component={LoginPage} />
               <Route exact path="/addExpense" component={AddExpense} />
-              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/statistics" component={Statistics} />
               <Route exact Path="/expenses " component={ExpenseList} />
             </Switch>
           </ExpensesContext.Provider>

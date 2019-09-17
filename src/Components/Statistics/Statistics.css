@@ -1,0 +1,91 @@
+.statistic p {
+    margin-top: 10%;
+    font-size: 25px;
+}
+
+
+.stats{
+    text-align: center;
+}
+
+.stats1 {
+    animation: moveInLeft .5 ease-out .5s;
+}
+
+.stats2{
+    animation: moveInLeft .5 ease-out .75s;
+}
+
+.stats3{
+    animation: moveInLeft .5 ease-out 1s;
+}
+
+.stats__title {
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.charts {
+    width: 95vw;
+    height: 200px;
+    margin-top: 75px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .statistic{
+        margin-left: 15vw;
+
+    } 
+
+    .statistic p {
+        margin-left: 10%;
+        margin-top: 10%;
+        display: inline-block; 
+        font-size: 25px;    
+    }
+
+    .charts__container {
+        width: 100vw;
+        margin-top: 100px;
+        margin-left: 10%;
+    } 
+
+    .barChart {
+        width: 500px;
+        height: 350px;
+        margin-top: 50px;
+    }
+
+    .doughnutChart {
+        width: 600px;
+        margin-top: 75px;
+    }
+        
+}
+
+@media screen and (min-width: 1024px) {
+    .charts__container {
+        display: flex;
+        width: 100vw;
+        margin-top: 100px;
+        margin-left: 0;
+    } 
+
+}

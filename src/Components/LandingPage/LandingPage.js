@@ -2,8 +2,8 @@ import React from 'react'
 import { Button } from "../Utils/Utils";
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
-import screenshot from './addexpense.png'
-import donut from './donut.png'
+import gif1 from './gif1.gif'
+import gif2 from './gif2.gif'
 
 const LandingPage = () =>{
         return (
@@ -21,24 +21,23 @@ const LandingPage = () =>{
               <section className="LandingPage__description1">
                 <h3>Keep track of your spending</h3>
                 <p>
-                  The key to saving money is knowing how much you can afford and
-                  what to spend it on. Expensify provides a simple way to record
+                  The key to saving money is knowing how much you can afford to spend. Expensity provides a simple way to record
                   your expenses and seeing where your money goes.
                 </p>
                 <img
-                  src={screenshot}
+                  src={gif1}
                   alt="add-expense form"
                   className="screenshot1"
                 />
               </section>
 
               <section className="LandingPage__description2">
-                <h3>Expensity Dashboard</h3>
+                <h3>See your progress</h3>
                 <p>
-                  Think you waste too much on food? These charts and statistics
-                  will help you understand what to spend less on.
+                  Spend too much money without realizing it? These charts and statistics
+                  updates as you record your expenses and will help you understand what you spend too much on.
                 </p>
-                <img src={donut} alt="charts" className="screenshot2" />
+                <img src={gif2} alt="charts" className="screenshot2" />
               </section>
               
                 <footer>Tam Phan © 2019</footer>
