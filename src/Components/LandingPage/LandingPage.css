@@ -72,7 +72,7 @@ p {
 }
 
 .Header a {
-    animation: moveInTop ease-out .75s;
+    animation: moveInRight ease-in .75s;
 }
 
 
@@ -87,12 +87,13 @@ footer {
     text-align: center;
     padding: .5%;
     font-size: 25px;
+    animation: moveInLeft ease-in .75s;
 }
 
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(10rem);
+        transform: translateY(3rem);
     }
 
     80% {
@@ -104,14 +105,29 @@ footer {
     }
 }
 
-@keyframes moveInTop {
+@keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateY(-2rem);
+        transform: translateX(5rem);
     }
 
-    80% {
-        transform: translateY(1rem);
+    50% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translatex(-5rem);
+    }
+
+    50% {
+        transform: translateX(1rem);
     }
     100% {
         opacity: 1;

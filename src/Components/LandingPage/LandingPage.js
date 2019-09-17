@@ -21,8 +21,9 @@ const LandingPage = () =>{
               <section className="LandingPage__description1">
                 <h3>Keep track of your spending</h3>
                 <p>
-                  The key to saving money is knowing how much you can afford to spend. Expensity provides a simple way to record
-                  your expenses and seeing where your money goes.
+                  The key to saving money is knowing how much you can afford to
+                  spend. Expensity provides a simple way to record your expenses
+                  and seeing where your money goes.
                 </p>
                 <img
                   src={gif1}
@@ -34,15 +35,14 @@ const LandingPage = () =>{
               <section className="LandingPage__description2">
                 <h3>See your progress</h3>
                 <p>
-                  Spend too much money without realizing it? These charts and statistics
-                  updates as you record your expenses and will help you understand what you spend too much on.
+                  Spend too much money without realizing it? These charts and
+                  statistics updates as you record your expenses and will help
+                  you understand what you spend too much on.
                 </p>
                 <img src={gif2} alt="charts" className="screenshot2" />
               </section>
-              
-                <footer>Tam Phan © 2019</footer>
-             
             </div>
+            <footer>Tam Phan © 2019</footer>
           </div>
         );
 }

@@ -81,11 +81,13 @@
     color:#FFF;
     text-shadow:1px 1px 1px #949494; 
     background-color:#56B0FE;
+    
 }
 
 
 .Button2:hover{
     background-color:#117FDF;
+    cursor: pointer;
 }
 
 
