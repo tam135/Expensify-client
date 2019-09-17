@@ -51,6 +51,7 @@ export default class Statistics extends Component {
       expenses: this.state.expenses || this.context.expenses
     });
   }
+  
   render() {
     let data1 = {
       labels: this.state.categories,
