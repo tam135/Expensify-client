@@ -1,5 +1,5 @@
 .LandingPage__app{
-    background: linear-gradient(to bottom right,#ffffff 0,#2c85fa);
+    background: linear-gradient(to bottom right,#ffffff 0,#d6dee9);
     background-size: cover;
     height: 200vh;
     font-family: DejaVu Sans;
@@ -52,11 +52,15 @@ p {
 
 
 .demo-button{
-    background: linear-gradient(to bottom right,#53d1fe 0,#1f66b6);
+    background: linear-gradient(to bottom right,#64fa84 0,#00c96b);
     width: 200px;
     font-size: 25px;
     margin-top: 45px;
-    
+}
+
+.demo-button:hover {
+    background: #26F1CB;
+    transform: scale(1.1);
 }
 .screenshot1 {
     height: 150px;

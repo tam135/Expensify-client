@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Dashboard.css";
 import ExpensesContext from "../../Context/ExpensesContext";
-import { HorizontalBar } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { Doughnut } from "react-chartjs-2";
 
 let check = true;
@@ -66,7 +66,9 @@ export default class Dashboard extends Component {
             "#F826F4"
           ],
           borderColor: "rgba(255,99,132,1)",
-          data: []
+          data: [],
+          padding: 25
+          
         }
       ]
     };
@@ -75,17 +77,18 @@ export default class Dashboard extends Component {
         {
           data: [],
           backgroundColor: [
-            
             "#36A2EB",
             "#FFCE56",
             "#FCEF2D",
             "#2D5BFC",
             "#2DFC45",
             "#F826F4"
-          ]
+          ],
+          cutoutPercentage: 70
         }
       ],
-      labels: this.state.categories
+      labels: this.state.categories,
+      cutoutPercentage: 70
     };
     const option = {
       tooltips: {
@@ -138,20 +141,39 @@ export default class Dashboard extends Component {
     }
     return (
       this.state.expenses && (
-        <div className="dashboard" >
+        <div className="dashboard">
           {/* <h1 style={{ textAlign: "center" }}>Charts and Stats </h1> */}
-          <p className="stats">Total Entries: {count_entries}</p>
-          <p className="stats">Total Expenses: ${total_amount_Spend}</p>
           <p className="stats">
-            Average expense: {''}$
-            {(total_amount_Spend / count_entries).toFixed(1)}
+            {count_entries}
+            <span className="stats__title">Total Entries</span>
           </p>
-          <HorizontalBar data={data1} options={{ maintainAspectRatio: true }} />
+          <p className="stats">
+            ${total_amount_Spend}
+            <span className="stats__title">Total Expenses</span>
+          </p>
+          <p className="stats">
+            ${(total_amount_Spend / count_entries).toFixed(2)}
+            <span className="stats__title">Expense Average</span>
+          </p>
 
-          <h4 style={{ textAlign: "center" }}>
-            Number of Expenses per category
-          </h4>
-          <Doughnut data={data2} options={option} />
+          <div className="charts__container">
+            <div className="charts barChart">
+              <Bar
+                data={data1}
+                options={{
+                  maintainAspectRatio: false,
+                  responsive: true
+                }}
+              />
+            </div>
+
+            <div className="charts doughnutChart">
+              {/* <h4 style={{ textAlign: "center" }}>
+                Percentage of spending
+              </h4> */}
+              <Doughnut data={data2} options={option} />
+            </div>
+          </div>
         </div>
       )
     );

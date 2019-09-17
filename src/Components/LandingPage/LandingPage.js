@@ -40,9 +40,9 @@ const LandingPage = () =>{
                 </p>
                 <img src={donut} alt="charts" className="screenshot2" />
               </section>
-              <section className="button-container">
+              
                 <footer>Tam Phan © 2019</footer>
-              </section>
+             
             </div>
           </div>
         );
