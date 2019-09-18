@@ -6,7 +6,11 @@ label{
     display: block;
 }
 
-
+.red {
+    color: rgb(221, 19, 19);
+    font-weight: bold;
+    font-size: 22px;
+}
 
 @media only screen and (min-width: 768px) {
    
