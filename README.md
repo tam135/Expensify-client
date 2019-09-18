@@ -13,7 +13,15 @@ Expensity is an expense tracking app that helps users keep track of their expens
 React, JavaScript, Node.js, Express, PostgreSQL, Knex, CSS, Mocha, Chai, 
 
 ### Screenshots
-![](./images/expensity1.png)
-![](./images/expensity2.png)
-![](./images/expensity3.png)
-![](./images/expensity4.png)
+
+
+
+
+
+
+
+
+
+
+
+
