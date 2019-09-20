@@ -93,16 +93,22 @@ class App extends Component {
                 path="/update/:expenseId"
                 component={UpdateExpense}
               />
-              <Route exact path="/" component={LandingPage} />
+              <Route 
+                exact path="/" 
+                component={LandingPage} />
               <PublicOnlyRoute
-                exact
                 path="/register"
                 component={RegistrationForm}
               />
-              <PublicOnlyRoute exact path="/login" component={LoginPage} />
-              <Route exact path="/addExpense" component={AddExpense} />
-              <Route exact path="/statistics" component={Statistics} />
-              {/* <Route exact Path="/expenses " component={ExpenseList}  /> */}
+              <PublicOnlyRoute 
+                path="/login" 
+                component={LoginPage} />
+              <PrivateRoute 
+                path="/addExpense" 
+                component={AddExpense} />
+              <Route 
+                path="/statistics" 
+                component={Statistics} />
               <Route
                 exact
                 path="/expenses"

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./Statistics.css";
 import ExpensesContext from "../../Context/ExpensesContext";
-import { Bar } from "react-chartjs-2";
-import { Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 
 let check = true;
 export default class Statistics extends Component {
@@ -68,8 +67,8 @@ export default class Statistics extends Component {
           ],
           borderColor: "rgba(255,99,132,1)",
           data: [],
-          padding: 25
-          
+          padding: 25,
+    
         }
       ]
     };
