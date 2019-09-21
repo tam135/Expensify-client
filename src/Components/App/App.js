@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import config from '../../config'
-import LandingPage from '../LandingPage/LandingPage'
+import LandingPage from '../../Routes/LandingPage/LandingPage'
 import { Route, Switch, withRouter } from 'react-router-dom'
 import Header from '../Header/Header'
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
 import LoginPage from "../../Routes/LoginPage";
-import AddExpense from '../AddExpense/AddExpense'
-import Statistics from '../Statistics/Statistics'
+import AddExpense from '../../Routes/AddExpense/AddExpense'
+import Statistics from '../../Routes/Statistics/Statistics'
 import ExpenseList from '../ExpenseList/ExpenseList';
-import UpdateExpense from '../UpdateExpense/UpdateExpense'
+import UpdateExpense from '../../Routes/UpdateExpense/UpdateExpense'
 import ExpensesContext from '../../Context/ExpensesContext'
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'

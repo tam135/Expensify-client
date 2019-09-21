@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from "../Utils/Utils";
+import { Button } from "../../Components/Utils/Utils";
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
 import gif1 from './gif1.gif'

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import config from '../../config'
 import ExpensesContext from '../../Context/ExpensesContext'
-import ExpenseForm from "../ExpenseForm/ExpenseForm";
+import ExpenseForm from "../../Components/ExpenseForm/ExpenseForm";
 import './AddExpense.css'
 
 export default class AddExpense extends Component {

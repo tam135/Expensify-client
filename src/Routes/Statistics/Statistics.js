@@ -44,7 +44,6 @@ export default class Statistics extends Component {
   }
 
   setExpenses() {
-    /* console.log("updating expenses"); */
     this.setState({
       originalExpenses: this.context.expenses,
       expenses: this.state.expenses || this.context.expenses
@@ -83,12 +82,11 @@ export default class Statistics extends Component {
             "#2D5BFC",
             "#2DFC45",
             "#F826F4"
-          ],
-          cutoutPercentage: 70
+          ]
         }
       ],
       labels: this.state.categories,
-      cutoutPercentage: 70
+      cutoutPercentage: 70,
     };
     const option = {
       tooltips: {
@@ -98,9 +96,9 @@ export default class Statistics extends Component {
             let meta = dataset._meta[Object.keys(dataset._meta)[0]];
             let total = meta.total;
             let currentValue = dataset.data[tooltipItem.index];
-            let percentage = parseFloat(
+           /*  let percentage = parseFloat(
               ((currentValue / total) * 100).toFixed(1)
-            );
+            ); */
             return currentValue + "%";
           },
           title: function(tooltipItem, data) {
@@ -131,7 +129,6 @@ export default class Statistics extends Component {
       total_entries_of_each_category.forEach(val => {
         count_entries += val;
       });
-      /* console.log(count_entries); */
       sum_of_each_category.forEach(val => {
         data1.datasets[0].data.push(val);
         let temp = (val / total_amount_Spend) * 100;
@@ -167,7 +164,10 @@ export default class Statistics extends Component {
             </div>
 
             <div className="charts doughnutChart">
-              <Doughnut data={data2} options={option} />
+              <Doughnut 
+                data={data2} 
+                options={option} 
+              />
             </div>
           </div>
         </div>

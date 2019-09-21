@@ -47,13 +47,25 @@ export default class RegistrationForm extends Component {
           <label htmlFor="RegistrationForm__full_name">
             Full name <Required />
           </label>
-          <Input2 name="full_name" type="text" required id="fullname"></Input2>
+          <Input2
+            name="full_name"
+            type="text"
+            required
+            id="fullname"
+            autoComplete="off"
+          ></Input2>
         </div>
         <div className="user_name">
           <label htmlFor="RegistrationForm__user_name">
             User name <Required />
           </label>
-          <Input2 name="user_name" type="text" required id="user_name"></Input2>
+          <Input2
+            name="user_name"
+            type="text"
+            required
+            id="user_name"
+            autoComplete="off"
+          ></Input2>
         </div>
         <div className="password">
           <label htmlFor="RegistrationForm__password">

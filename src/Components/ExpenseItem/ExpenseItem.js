@@ -30,13 +30,15 @@ export default function ExpenseItem(props) {
       <ExpensesContext.Consumer>
         {context => (
           <div className="expense-container">
+            
             <div className="expense-header">
+              
               <div className="expense-item">
                 <span className="ExpenseItem__Info">{props.date}</span>
               </div>
 
               <div className="expense-item">
-                <span className="ExpenseItem__Info">{props.amount}</span>
+                <span className="ExpenseItem__Info">${props.amount}</span>
               </div>
 
               <div className="expense-item">
@@ -53,12 +55,6 @@ export default function ExpenseItem(props) {
                 <FontAwesomeIcon className="edit-delete" icon="edit" />
               </Link>
             </button>
-            {/* <Link to={`/update/${props.id}`}>
-              <button className="button__edit-delete edit">
-                <FontAwesomeIcon className="edit-delete" icon="edit" />
-              </button>
-            </Link>
- */}
             <button
               onClick={() => {
                 deleteExpense(props.id, context.deleteExpense);
