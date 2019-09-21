@@ -73,11 +73,3 @@ ExpenseItem.defaultProps = {
   onClickDelete: () => {},
 }
 
-ExpenseItem.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  date: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  desciption: PropTypes.string,
-  style: PropTypes.string.isRequired,
-  onClickDelete: PropTypes.func
-};

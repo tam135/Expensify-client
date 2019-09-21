@@ -25,7 +25,6 @@ export default class LoginForm extends Component {
             password.value = ''
             TokenService.saveAuthToken(res.authToken)
             this.props.onLoginSuccess()
-            console.log('logged in success')
         })
         .catch(res => {
             this.setState({ error: res.error })
@@ -45,7 +44,12 @@ export default class LoginForm extends Component {
               <label htmlFor="LoginForm__user_name">
                 User name <Required />
               </label>
-              <Input2 required name="username" id="user_name"></Input2>
+              <Input2 
+                required 
+                name="username" 
+                id="user_name" 
+                autoComplete="off">
+              </Input2>
             </div>
 
             <div className="password">
@@ -57,6 +61,7 @@ export default class LoginForm extends Component {
                 name="password"
                 type="password"
                 id="password"
+                autoComplete="off"
               ></Input2>
             </div>
             <Button2 type="submit">Login</Button2>

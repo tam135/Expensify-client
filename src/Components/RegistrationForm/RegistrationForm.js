@@ -14,21 +14,20 @@ export default class RegistrationForm extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault();
+    this.setState({ error: null });
     const { full_name, user_name, password } = ev.target;
 
-    this.setState({ error: null })
     AuthApiService.postUser({
         full_name: full_name.value,
         user_name: user_name.value,
         password: password.value
     })
-        .then(user => {
-            full_name.value = "";
-            user_name.value = "";
-            password.value = "";
-            this.props.onRegistrationSuccess();
-            console.log('registered')
-        })
+      .then(user => {
+        full_name.value = "";
+        user_name.value = "";
+        password.value = "";
+        this.props.onRegistrationSuccess();
+      })
         .catch(res => {
             this.setState({ error: res.error })
         })
@@ -76,6 +75,7 @@ export default class RegistrationForm extends Component {
             type="password"
             required
             id="password"
+            autoComplete="off"
           ></Input2>
         </div>
         <Button2 type="submit">Register</Button2>

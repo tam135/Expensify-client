@@ -19,7 +19,6 @@ library.add(
     
 )
 
-console.log(process.env)
 ReactDOM.render(
     <BrowserRouter>
         <App />

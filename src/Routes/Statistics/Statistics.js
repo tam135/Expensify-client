@@ -30,7 +30,6 @@ export default class Statistics extends Component {
       ) {
         this.setExpenses();
       } else {
-        console.log("no changes");
       }
     }
   }
@@ -67,10 +66,21 @@ export default class Statistics extends Component {
           borderColor: "rgba(255,99,132,1)",
           data: [],
           padding: 25,
-    
+          
         }
       ]
     };
+    let barChartOptions = {
+      maintainAspectRatio: false,
+      responsive: true,
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+          },
+        }],
+      },
+    }
     let data2 = {
       datasets: [
         {
@@ -96,9 +106,10 @@ export default class Statistics extends Component {
             let meta = dataset._meta[Object.keys(dataset._meta)[0]];
             let total = meta.total;
             let currentValue = dataset.data[tooltipItem.index];
-           /*  let percentage = parseFloat(
+             let percentage = parseFloat(
               ((currentValue / total) * 100).toFixed(1)
-            ); */
+            ); 
+            console.log(percentage)
             return currentValue + "%";
           },
           title: function(tooltipItem, data) {
@@ -156,10 +167,7 @@ export default class Statistics extends Component {
             <div className="charts barChart">
               <Bar
                 data={data1}
-                options={{
-                  maintainAspectRatio: false,
-                  responsive: true
-                }}
+                options={barChartOptions}
               />
             </div>
 

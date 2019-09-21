@@ -8,6 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "chart.js": "^2.8.0",
     "date-fns": "^2.0.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
@@ -44,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2"
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "react-test-renderer": "^16.9.0"
   }
 }
