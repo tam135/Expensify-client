@@ -1,6 +1,5 @@
 import React from 'react'
 import './ExpenseItem.css'
-import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ExpensesContext from '../../Context/ExpensesContext';
 import config from '../../config'
