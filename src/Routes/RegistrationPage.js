@@ -5,12 +5,14 @@ import RegistrationForm from "../../Components/RegistrationForm/RegistrationForm
 
 class RegistrationPage extends Component {
   static defaultProps = {
+    test: 'asdfsadf',
     history: {
       push: () => {}
     }
   };
 
   handleRegistrationSuccess = () => {
+    console.log(this)
     const { history } = this.props
     history.push('/login');
   };
@@ -21,6 +23,7 @@ class RegistrationPage extends Component {
         <h2>Register</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
+          test={this.handleRegistrationSuccess}
           history={this.props.history}
         />
       </Section>

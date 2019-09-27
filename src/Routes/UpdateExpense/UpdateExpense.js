@@ -66,7 +66,7 @@ export default class UpdateExpense extends Component {
         })
     }
     handleClickCancel = () => {
-        this.props.history.push('/expense')
+        this.props.history.push('/expenses')
     };
 
     render() {

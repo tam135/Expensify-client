@@ -109,7 +109,6 @@ export default class Statistics extends Component {
              let percentage = parseFloat(
               ((currentValue / total) * 100).toFixed(1)
             ); 
-            console.log(percentage)
             return currentValue + "%";
           },
           title: function(tooltipItem, data) {

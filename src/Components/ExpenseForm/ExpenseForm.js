@@ -97,6 +97,7 @@ class ExpenseForm extends Component {
             id="style"
             name="style"
             value={style}
+            required
             onChange={this.handleChangeStyle}
           >
             <option value="blank">Choose Category</option>
@@ -115,6 +116,7 @@ class ExpenseForm extends Component {
             value={description}
             name="description"
             id="description"
+            required
             placeholder="What did you spend your money on?"
             onChange={this.handleChangeDescription}
           />

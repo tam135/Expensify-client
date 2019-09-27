@@ -6,17 +6,21 @@ import AuthApiService from "../../Services/auth-api-service";
 
 
 export default class RegistrationForm extends Component {
+   constructor(props){
+    super(props)
+    this.state = { error: null };
+  } 
   static defaultProps = {
         onRegistrationSuccess: () => {}
     }
 
-  state = { error: null };
-
+  /* state = {error: null} */
   handleSubmit = ev => {
+    console.log(this.props);
     ev.preventDefault();
     this.setState({ error: null });
     const { full_name, user_name, password } = ev.target;
-
+    const {onRegistrationSuccess} = this.props
     AuthApiService.postUser({
         full_name: full_name.value,
         user_name: user_name.value,
@@ -26,17 +30,17 @@ export default class RegistrationForm extends Component {
         full_name.value = "";
         user_name.value = "";
         password.value = "";
-        this.props.onRegistrationSuccess()
-        this.props.history.push('/login') 
+        //this.props.onRegistrationSuccess()
+        console.log(onRegistrationSuccess)
+        /* this.props.history.push('/login')  */
       })
         .catch(res => {
             this.setState({ error: res.error })
-        })
-
-    
+        }) 
   };
 
   render() {
+    console.log(this.props)
      const { error } = this.state; 
     return (
       <Form className="RegistrationForm" onSubmit={this.handleSubmit}>

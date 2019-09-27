@@ -15,12 +15,10 @@ function deleteExpense(expenseId, callback) {
     .then(res => {
       if (!res.ok) return res.json().then(error => Promise.reject(error));
     })
-    .then(data => {
-      console.log({ data });
+    .then(data => {;
       callback(expenseId);
     })
     .catch(error => {
-      console.log(error);
     });
 }
 
