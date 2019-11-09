@@ -16,7 +16,7 @@ export default class RegistrationForm extends Component {
 
   /* state = {error: null} */
   handleSubmit = ev => {
-    console.log(this.props);
+
     ev.preventDefault();
     this.setState({ error: null });
     const { full_name, user_name, password } = ev.target;
@@ -30,9 +30,8 @@ export default class RegistrationForm extends Component {
         full_name.value = "";
         user_name.value = "";
         password.value = "";
-        //this.props.onRegistrationSuccess()
-        console.log(onRegistrationSuccess)
-        /* this.props.history.push('/login')  */
+        this.props.onRegistrationSuccess()
+        this.props.history.push('/login')
       })
         .catch(res => {
             this.setState({ error: res.error })
@@ -40,7 +39,6 @@ export default class RegistrationForm extends Component {
   };
 
   render() {
-    console.log(this.props)
      const { error } = this.state; 
     return (
       <Form className="RegistrationForm" onSubmit={this.handleSubmit}>
