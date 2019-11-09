@@ -1,5 +1,6 @@
 .LandingPage__app{
     background-size: cover;
+    
     height: 225vh;
     font-family: DejaVu Sans;
 }
@@ -13,6 +14,124 @@
 
 .LandingPage__container {
     animation: moveInBottom ease-out .75s;
+}
+
+.LandingPage__title {
+    background: -webkit-linear-gradient(rgb(81, 255, 182), rgb(59, 241, 187), rgb(28, 226, 216));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+}
+
+.LandingPage-hr {
+    background: linear-gradient(to right,rgb(81, 255, 182), rgb(59, 241, 187), rgb(28, 226, 216));
+    height: 1px;
+    border: none;
+    width: 40%;
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+}
+.indicator {
+    transform: rotate(45deg);
+    height: 50px;
+    width: 50px;
+    /* background: black;; */
+}
+
+.indicator:hover {
+    cursor: pointer;
+}
+
+.indicator span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-right: 3px solid #1081C7;
+    border-bottom: 3px solid #1081C7; 
+    animation: animate 1s linear infinite;
+}
+
+.indicator span:nth-child(1) {
+    top: -30px;
+    left: -30px;
+    animation-delay: 0s;
+}
+
+.indicator span:nth-child(2) {
+    top: -15px;
+    left: -15px;
+    animation-delay:.2s;
+}
+
+.indicator span:nth-child(3) {
+    top: -0px;
+    left: -0px;
+    animation-delay: .4s;
+}
+
+.indicator span:nth-child(4) {
+    top: 15px;
+    left: 15px;
+    animation-delay: .6s;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.column:nth-child(2) {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.column {
+    height: 25rem;
+    width: 33%;
+    background:#1081C7;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.icons {
+    font-size: 10rem;
+    color: #fff;
+    
+}
+
+@keyframes animate {
+    0% {
+        border-color: rgb(59, 241, 187);
+        /* transform: translate(0,0) */
+    }
+    20% {
+        border-color: rgb(59, 241, 187);
+        /* transform: translate(15px,15px) */
+    }
+    20.1%, 100% {
+        border-color: rgb(24, 207, 168);
+    }
 }
 
 h1 {
@@ -37,12 +156,20 @@ p {
 .LandingPage__Tagline {
     width: 90%;
     margin: auto auto;
+    background: -webkit-linear-gradient(rgb(60, 218, 152), rgb(43, 223, 169), rgb(28, 226, 216));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.LandingPage__Tagline h2 {
+    font-weight: 600;
 }
 
 .LandingPage__description1 {
     margin: auto auto;
     width: 80%;
-    padding-top: 50vh;
+    padding-top: 20%;
 }
 
 
@@ -55,15 +182,17 @@ p {
 
 
 .demo-button{
-    background: linear-gradient(to bottom right,#64fa84 0,#00c96b);
+    background: linear-gradient(to right,#64fa84 0,#00c9ae);
     width: 200px;
     font-size: 25px;
     margin-top: 45px;
+    transition: .3s;
 }
 
 .demo-button:hover {
-    background: #26F1CB;
-    transform: scale(1.1);
+    /* background: #26F1CB; */
+    color: #fff;
+    transform: translateY(-5px) scale(1.1);
     cursor: pointer;
 }
 .screenshot1, .screenshot2 {
@@ -73,6 +202,8 @@ p {
 .Header a {
     animation: moveInRight ease-in .75s;
 }
+
+
 
 
 footer {
@@ -133,7 +264,26 @@ footer {
         transform: translate(0)
     }
 }
+@media only screen and (max-width: 768px) {
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    
 
+    .column:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .column {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
 @media only screen and (min-width: 768px) {
 
     .LandingPage__container {
@@ -179,5 +329,7 @@ footer {
     .screenshot1, .screenshot2 {
         width: 40vw;
     }
+
+
 
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from "../../Components/Utils/Utils";
 import { Link } from 'react-router-dom'
+import { FaHandHoldingUsd, FaLock, FaRegCreditCard} from 'react-icons/fa'
 import './LandingPage.css'
 import gif1 from './gif1.gif'
 import gif2 from './gif2.gif'
@@ -10,14 +11,53 @@ const LandingPage = () =>{
           <div className="LandingPage__app">
             <div className="LandingPage__container">
               <h1 className="LandingPage__title">Expensity</h1>
+              <hr className="LandingPage-hr"></hr>
+
               <section className="LandingPage__Tagline">
                 <h2>
                   Stay on track with your spending so you can start saving.
                 </h2>
-                <Link to="/expenses">
-                  <Button className="button demo-button">Explore</Button>
-                </Link>
               </section>
+
+              <Link to="/expenses">
+                <Button className="button demo-button">Explore</Button>
+              </Link>
+
+              <div className="indicator-container">
+                <section className="indicator">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </section>
+              </div>
+
+              <section className="row">
+                <div className="column">
+                  <div className="icons">
+                    <FaRegCreditCard />
+                  </div>
+                  <h3>Easy to use</h3>
+                  <p>Record your expenses and track progress with ease</p>
+                </div>
+
+                <div className="column">
+                  <div className="icons">
+                    <FaHandHoldingUsd />
+                  </div>
+                  <h3>Rewarding Experience</h3>
+                  <p>Understand your spending habits better than ever before</p>
+                </div>
+
+                <div className="column">
+                  <div className="icons">
+                    <FaLock />
+                  </div>
+                  <h3>Security</h3>
+                  <p>Rest assured knowing your records are kept confidential</p>
+                </div>
+              </section>
+
               <section className="LandingPage__description1">
                 <h3>Keep track of your spending</h3>
                 <p>
@@ -42,7 +82,7 @@ const LandingPage = () =>{
                 <img src={gif2} alt="charts" className="screenshot2" />
               </section>
             </div>
-            <footer>Tam Phan © 2019</footer>
+            <footer>Tam Phan © 2019</footer> 
           </div>
         );
 }

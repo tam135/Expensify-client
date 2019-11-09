@@ -38,7 +38,7 @@
     .expense-container {
         width: 80vw;
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 7px;
         margin: 15px 15%;
         display: flex;
         padding: 0;
