@@ -5,27 +5,43 @@ import { FaHandHoldingUsd, FaLock, FaRegCreditCard} from 'react-icons/fa'
 import './LandingPage.css'
 import gif1 from './gif1.gif'
 import gif2 from './gif2.gif'
+import desktop from '../../Images/desktop.png'
+import iphone from '../../Images/iphone.png'
 
 const LandingPage = () =>{
         return (
           <div className="LandingPage__app">
             <div className="LandingPage__container">
-              <h1 className="LandingPage__title">Expensity</h1>
-              <hr className="LandingPage-hr"></hr>
 
-              <section className="LandingPage__Tagline">
-                <h2>
-                  Stay on track with your spending so you can start saving.
-                </h2>
+              <div className="LandingPage__title">
+                <h1 className="heading">Expensity</h1>
+                <hr className="LandingPage-hr"></hr>
+                <section className="LandingPage__Tagline">
+                  <p>
+                    Stay on track with your spending so you can start saving.
+                  </p>
+                </section>
+
+                <Link to="/expenses">
+                  <Button className="button demo-button">Explore</Button>
+                </Link>
+              </div>
+
+              <section className="app-screenshot">
+                  <img
+                    src={desktop}
+                    alt="desktop screenshot"
+                    className="desktop-screenshot"
+                  />
+                  <img 
+                    src={iphone} 
+                    alt="iphone screenshot" 
+                    className='iphone-screenshot'
+                  />
               </section>
-
-              <Link to="/expenses">
-                <Button className="button demo-button">Explore</Button>
-              </Link>
 
               <div className="indicator-container">
                 <section className="indicator">
-                  <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -82,7 +98,7 @@ const LandingPage = () =>{
                 <img src={gif2} alt="charts" className="screenshot2" />
               </section>
             </div>
-            <footer>Tam Phan © 2019</footer> 
+{/*             <footer>Tam Phan © 2019</footer> */}
           </div>
         );
 }
