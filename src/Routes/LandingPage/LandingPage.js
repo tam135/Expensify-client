@@ -1,18 +1,18 @@
 import React from 'react'
 import { Button } from "../../Components/Utils/Utils";
 import { Link } from 'react-router-dom'
-import { FaHandHoldingUsd, FaLock, FaRegCreditCard} from 'react-icons/fa'
+
 import './LandingPage.css'
 import gif1 from './gif1.gif'
 import gif2 from './gif2.gif'
 import desktop from '../../Images/desktop.png'
 import iphone from '../../Images/iphone.png'
+import ThreeColGrid from '../../Components/ThreeColGrid/ThreeColGrid';
 
 const LandingPage = () =>{
         return (
           <div className="LandingPage__app">
             <div className="LandingPage__container">
-
               <div className="LandingPage__title">
                 <h1 className="heading">Expensity</h1>
                 <hr className="LandingPage-hr"></hr>
@@ -28,50 +28,22 @@ const LandingPage = () =>{
               </div>
 
               <section className="app-screenshot">
-                  <img
-                    src={desktop}
-                    alt="desktop screenshot"
-                    className="desktop-screenshot"
-                  />
-                  <img 
-                    src={iphone} 
-                    alt="iphone screenshot" 
-                    className='iphone-screenshot'
-                  />
+                <img
+                  src={desktop}
+                  alt="desktop screenshot"
+                  className="desktop-screenshot"
+                />
+                <img
+                  src={iphone}
+                  alt="iphone screenshot"
+                  className="iphone-screenshot"
+                />
               </section>
-
-              <div className="indicator-container">
-                <section className="indicator">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </section>
-              </div>
-
-              <section className="row">
-                <div className="column">
-                  <div className="icons">
-                    <FaRegCreditCard />
-                  </div>
-                  <h3>Easy to use</h3>
-                  <p>Record your expenses and track progress with ease</p>
-                </div>
-
-                <div className="column">
-                  <div className="icons">
-                    <FaHandHoldingUsd />
-                  </div>
-                  <h3>Rewarding Experience</h3>
-                  <p>Understand your spending habits better than ever before</p>
-                </div>
-
-                <div className="column">
-                  <div className="icons">
-                    <FaLock />
-                  </div>
-                  <h3>Security</h3>
-                  <p>Rest assured knowing your records are kept confidential</p>
-                </div>
+{/* 
+              <section className="features">
+                <h2 class="features-title">FEATURES</h2>
+                <h3 class="features-subtitle">A BETTER WAY TO SAVE MONEY</h3>
+                <ThreeColGrid />
               </section>
 
               <section className="LandingPage__description1">
@@ -96,9 +68,9 @@ const LandingPage = () =>{
                   you understand what you spend too much on.
                 </p>
                 <img src={gif2} alt="charts" className="screenshot2" />
-              </section>
+              </section> */}
             </div>
-{/*             <footer>Tam Phan © 2019</footer> */}
+            {/*             <footer>Tam Phan © 2019</footer> */}
           </div>
         );
 }
