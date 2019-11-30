@@ -1,125 +1,60 @@
-.LandingPage__app{
-    background-size: cover;
-/*     height: 250vh; */
-    font-family: Montserrat,sans-serif;
-}
-.LandingPage__container {
+.container {
     text-align: center;
-    margin: auto auto;
-/*     height: 150vh; */
-    padding: 1%;
-    padding-top: 10%;
 }
 
-.LandingPage__container {
-    animation: moveInBottom ease-out .75s;
+.about {
+    width: 85%;
+    margin: 0 auto;
+    animation: moveInLeft 1s;
 }
-
-.LandingPage__title {
-    font-family: Montserrat,sans-serif;
-    font-weight: 400;
-    float: left;
-    margin-bottom: 50px;
-}
-
-.heading {
-    text-transform: uppercase;
-    letter-spacing: 12px;
-}
-
-.LandingPage-hr {
+.hr {
     background: linear-gradient(to right,rgb(81, 255, 182), rgb(59, 241, 187), rgb(28, 226, 216));
     height: 1px;
     border: none;
-    width: 40%;
+    width: 45%;
 }
 
-.app-screenshot {
+.demo-button{
+    background: linear-gradient(to right,#64fa84 0,#00c9ae);
+    width: 200px;
+    font-size: 25px;
+    margin-top: 30px;
+    transition: .3s;
+}
+
+.demo-button:hover {
+    color: #fff;
+    transform: translateY(-5px) scale(1.1);
+    cursor: pointer;
+    
+}
+.Header a {
+    animation: moveInLeft 2s;
+}
+
+.screenshots {
+    width: 90%;
+    margin: 100px auto;
     position: relative;
-    z-index: -1;
+    animation: moveInRight .8s;
 }
 
 .desktop-screenshot {
-    width: 85%;
-    border: 1px solid #b4b1b1;
+    width: 95%;
+    height: 300px;
+    border: 1px solid #F1F1F1;
     border-radius: 5px;
-    -webkit-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-    -moz-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-    box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
 }
 
 .iphone-screenshot {
-    width: 30%;
+    width: 40%;
+    height: 275px;
     position: absolute;
-    right: 15px;
-    top: 47vh;
-}
-.indicator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-}
-.indicator {
-    transform: rotate(45deg);
-    height: 50px;
-    width: 50px;
-    /* background: black;; */
+    right: -10px;
+    top: 50px;
 }
 
-.indicator span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    box-sizing: border-box;
-    border: none;
-    border-right: 3px solid #1081C7;
-    border-bottom: 3px solid #1081C7; 
-    animation: animate 1s linear infinite;
-}
-
-.indicator span:nth-child(1) {
-    top: -30px;
-    left: -30px;
-    animation-delay: 0s;
-}
-
-.indicator span:nth-child(2) {
-    top: -15px;
-    left: -15px;
-    animation-delay:.2s;
-}
-
-.indicator span:nth-child(3) {
-    top: -0px;
-    left: -0px;
-    animation-delay: .4s;
-}
-
-.indicator span:nth-child(4) {
-    top: 15px;
-    left: 15px;
-    animation-delay: .6s;
-}
-
-
-.features {
-    margin-top: 30%;
-}
-
-.features-title {
-    font-size: 3rem;
-    margin-bottom: .3rem;
-}
-
-.features-subtitle {
-    font-size: 2rem;
-    margin-bottom: 5rem;
-}
-@keyframes animate {
+ @keyframes animate {
     0% {
         border-color: rgb(59, 241, 187);
         /* transform: translate(0,0) */
@@ -131,86 +66,6 @@
     20.1%, 100% {
         border-color: rgb(24, 207, 168);
     }
-}
-
-h1 {
-    font-size: 45px;
-}
-
-h2 {
-    font-size: 30px;
-    font-weight: 500
-}
-
-h3 {
-    font-size: 30px;
-}
-
-p {
-    font-size: 20px;
-    font-weight: 400
-}
-
-
-.LandingPage__Tagline {
-    width: 70%;
-    margin: auto auto;
-}
-
-
-.LandingPage__description1 {
-    margin: auto auto;
-    width: 80%;
-    padding-top: 20%;
-}
-
-
-.LandingPage__description2{
-    margin: auto auto;
-    width: 80%;
-    margin-top: 75px;
-}
-
-
-
-.demo-button{
-    background: linear-gradient(to right,#64fa84 0,#00c9ae);
-    width: 200px;
-    font-size: 25px;
-    margin-top: 45px;
-    transition: .3s;
-}
-
-.demo-button:hover {
-    /* background: #26F1CB; */
-    color: #fff;
-    transform: translateY(-5px) scale(1.1);
-    cursor: pointer;
-}
-.screenshot1, .screenshot2 {
-    width: 90%;
-    border: 1px solid #c5c5c5
-}
-
-.Header a {
-    animation: moveInRight ease-in .75s;
-}
-
-
-
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 30px;
-    width: 100%;
-    background-color: #1081C7;
-    color: white;
-    text-align: center;
-    padding: .5%;
-    font-size: 20px;
-    animation: moveInLeft ease-in .75s;
 }
 
 @keyframes moveInBottom {
@@ -258,120 +113,74 @@ footer {
     }
 }
 
+
 @media only screen and (min-width: 768px) {
-
-    .LandingPage__container {
-        width: 70%;
-        text-align: center;
-        margin: auto auto;
-
-    }
-
-    .LandingPage__title {
-        font-size: 65px;
-    }
-
-    .LandingPage__description1 {
-        margin: auto auto;
-        width: 80%
-    }
-
-
-
-    .demo-button {
-        margin-top: 50px;
-        width: 200px;
-    }
-    .button-container {
-        width: 80%;
-        height: 100px;
-        margin: 25px auto;
-    }
-    login-button, reg-button {
-        display: inline-block;
-        width: 200px;
-        margin: 50px 25px;
-        border-radius: 5px;
-        padding: 20px;
-        font-size: 25px;
-    } 
-    .demo-button{
-        width: 200px;
-        font-size: 25px;
-    }
-
-    .screenshot1, .screenshot2 {
-        width: 40vw;
-    }
-
-    .indicator-container {
-        
-        margin-top: 7rem;
-    }
-
     .desktop-screenshot {
-        width: 80%;
-        margin-top: 50px;
-        border: 1px solid #b4b1b1;
-        border-radius: 5px;
-        -webkit-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-        -moz-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-        box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
+        width: 75%;
     }
 
     .iphone-screenshot {
-        position: absolute;
-        width: 25%;
-        right: 20px;
-        top: 525px;
+        width: 20%;
+        right: 50px;
+        top: 50px;
     }
-
 }
-
 @media only screen and (min-width: 1024px) {
-    .desktop-screenshot {
-        /* max-width: 700px;
-        height: 500px; */
-        width: 85%;
-        margin-top: 0px;
-        border: 1px solid #b4b1b1;
-        border-radius: 5px;
-        -webkit-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-        -moz-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
-        box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
+    .hr {
+        width: 35%;
     }
 
-    .iphone-screenshot {
-        position: absolute;
+    .about {
         width: 25%;
-        right: 20px;
-        top: 550px;
+        float: left;
+        margin: 10rem 0 0 5%;
     }
 
-    .indicator-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5rem;
+    .screenshots {
+        width: 500px;
+        margin-right: 10%;
+        position: relative;
+        float: right;
     }
-}
-@media only screen and (min-width: 1424px) {
+
     .desktop-screenshot {
-        /* max-width: 700px;
-        height: 500px; */
-        width: 50%;
-        margin-top: 0px;
-        border: 1px solid #b4b1b1;
-        border-radius: 5px;
+        width: 100%;
+        height: 450px;
         -webkit-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
         -moz-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
         box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
     }
 
     .iphone-screenshot {
+        width: 30%;
         position: absolute;
-        width: 15%;
-        right: 20px;
         top: 200px;
+        right: -40px;
     }
 }
+
+@media only screen and (min-width: 1440px) {
+    .about {
+        width: 25%;
+        float: left;
+        margin: 10rem 0 0 10%;
+    }
+
+    .screenshots {
+            width: 700px;
+            margin-right: 15%;
+    }
+
+    .iphone-screenshot {
+        width: 25%;
+        height: 300px;
+        position: absolute;
+        top: 185px;
+        right: -40px;
+    }
+}    
+
+/* desktop screen shot box shadow
+-webkit-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
+        -moz-box-shadow: 6px 6px 30px 2px rgba(209,205,209,1);
+        box-shadow: 6px 6px 30px 2px rgba(209,205,209,1); */

@@ -11,68 +11,37 @@ import ThreeColGrid from '../../Components/ThreeColGrid/ThreeColGrid';
 
 const LandingPage = () =>{
         return (
-          <div className="LandingPage__app">
-            <div className="LandingPage__container">
-              <div className="LandingPage__title">
-                <h1 className="heading">Expensity</h1>
-                <hr className="LandingPage-hr"></hr>
-                <section className="LandingPage__Tagline">
-                  <p>
-                    Stay on track with your spending so you can start saving.
-                  </p>
-                </section>
+          <div className="container">
 
-                <Link to="/expenses">
-                  <Button className="button demo-button">Explore</Button>
-                </Link>
-              </div>
-
-              <section className="app-screenshot">
-                <img
-                  src={desktop}
-                  alt="desktop screenshot"
-                  className="desktop-screenshot"
-                />
-                <img
-                  src={iphone}
-                  alt="iphone screenshot"
-                  className="iphone-screenshot"
-                />
-              </section>
-{/* 
-              <section className="features">
-                <h2 class="features-title">FEATURES</h2>
-                <h3 class="features-subtitle">A BETTER WAY TO SAVE MONEY</h3>
-                <ThreeColGrid />
-              </section>
-
-              <section className="LandingPage__description1">
-                <h3>Keep track of your spending</h3>
-                <p>
-                  The key to saving money is knowing how much you can afford to
-                  spend. Expensity provides a simple way to record your expenses
-                  and seeing where your money goes.
-                </p>
-                <img
-                  src={gif1}
-                  alt="add-expense form"
-                  className="screenshot1"
-                />
-              </section>
-
-              <section className="LandingPage__description2">
-                <h3>See your progress</h3>
-                <p>
-                  Spend too much money without realizing it? These charts and
-                  statistics update as you record your expenses and will help
-                  you understand what you spend too much on.
-                </p>
-                <img src={gif2} alt="charts" className="screenshot2" />
-              </section> */}
+            <div className="about">
+              <h1 className="heading">Expensity</h1>
+              <hr className="hr"></hr>
+              <p>Stay on track with your spending so you can start saving.</p>
+              <Link to="/expenses">
+                <Button className="button demo-button">Explore</Button>
+              </Link>
             </div>
-            {/*             <footer>Tam Phan © 2019</footer> */}
+
+            <div className="screenshots">
+              <img
+                src={desktop}
+                alt="desktop screenshot"
+                className="desktop-screenshot"
+              />
+              <img
+                src={iphone}
+                alt="iphone screenshot"
+                className="iphone-screenshot"
+              />
+            </div>
+            
           </div>
-        );
+
+
+                
+
+
+        )
 }
 
 export default LandingPage
